@@ -1,0 +1,922 @@
+openapi: 3.1.0
+info:
+  title: API
+  description: |
+    # REST API
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /profile:
+    get:
+      tags:
+        - Інформація про користувача
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  role:
+                    type: string
+                    example: "1"
+                  name:
+                    type: string
+                    example: Шевченка Василь Петрович
+                  nickname:
+                    type: string
+                    example: "@vasya"
+                  phone:
+                    type: string
+                    example: +380 66 3615620
+                  telegram:
+                    type: string
+                    example: "@vasya"
+                  login:
+                    type: string
+                    example: Vasyan123
+                  pass:
+                    type: string
+                    example: hiuy&Y&hy0
+                  bank:
+                    type: string
+                    example: Mono
+                  card:
+                    type: string
+                    example: 4444 1111 2222 5555
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /active-orders:
+    get:
+      tags:
+        - Активні замовлення
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        date:
+                          type: string
+                          example: 18.01.2023
+                        topic:
+                          type: string
+                          example: Економіка
+                        type:
+                          type: string
+                          example: Курсова робота
+                        name:
+                          type: string
+                          example: Банківська система в період років великої депресії
+                        page_count:
+                          type: string
+                          example: "30"
+                        unique:
+                          type: string
+                          example: 50%
+                        price:
+                          type: string
+                          example: "550"
+                        garantee:
+                          type: string
+                          example: 14 днів/ДАТА
+                        note:
+                          type: string
+                          example: "-"
+                        status:
+                          type: string
+                          example: edit
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /done-orders:
+    get:
+      tags:
+        - Виконанні замовлення
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        date:
+                          type: string
+                          example: 18.01.2023
+                        topic:
+                          type: string
+                          example: Економіка
+                        type:
+                          type: string
+                          example: Курсова робота
+                        name:
+                          type: string
+                          example: Банківська система в період років великої депресії
+                        page_count:
+                          type: string
+                          example: "30"
+                        unique:
+                          type: string
+                          example: 50%
+                        price:
+                          type: string
+                          example: "550"
+                        garantee:
+                          type: string
+                          example: 14 днів/ДАТА
+                        status:
+                          type: string
+                          example: success
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /instructions:
+    get:
+      tags:
+        - Інструкції
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          example: Таблиця оригінальності
+                        text:
+                          type: string
+                          example:
+                            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                            repellendus sed est perferendis eveniet praesentium natus
+                            repudiandae expedita fugiat. Ab, harum facere aliquid commodi
+                            laborum corrupti earum placeat voluptate rerum. Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Iste repellendus sed est
+                            perferendis eveniet praesentium natus repudiandae expedita fugiat.
+                            Ab, harum facere aliquid commodi laborum corrupti earum placeat
+                            voluptate rerum. Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Iste repellendus sed est perferendis eveniet praesentium natus
+                            repudiandae expedita fugiat. Ab, harum facere aliquid commodi
+                            laborum corrupti earum placeat voluptate rerum. Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Iste repellendus sed est
+                            perferendis eveniet praesentium natus repudiandae expedita fugiat.
+                            Ab, harum facere aliquid commodi laborum corrupti earum placeat
+                            voluptate rerum."
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /manage-rating:
+    get:
+      tags:
+        - Менеджер замовлення на оцінці
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        customer:
+                          type: string
+                          example: "@petya"
+                        manager:
+                          type: string
+                          example: "@ya"
+                        deadline:
+                          type: string
+                          example: 18.01.2023
+                        topic:
+                          type: string
+                          example: Економіка
+                        type:
+                          type: string
+                          example: Курсова робота
+                        name:
+                          type: string
+                          example: Банківська система в період років великої депресії
+                        unique:
+                          type: string
+                          example: 50%
+                        garantee:
+                          type: string
+                          example: 1 тиждень
+                        readyToDo:
+                          type: string
+                          example: "1"
+                        price:
+                          type: string
+                          format: date
+                          example: "1000"
+                        discount:
+                          type: string
+                          example: 10%
+                        note:
+                          type: string
+                          example: перше замовлення
+                        payment:
+                          type: string
+                          example: pay
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /manage-authors:
+    get:
+      tags:
+        - Автори
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        name:
+                          type: string
+                          example: Велеров Іван Велерійович
+                        nickname:
+                          type: string
+                          example: "@petya"
+                        phone:
+                          type: string
+                          example: +380 663915620
+                        telegram:
+                          type: string
+                          example: "@valeron"
+                        rate:
+                          type: string
+                          example: "4.5"
+                        done:
+                          type: string
+                          format: date-time
+                          example: "10"
+                        canceled:
+                          type: string
+                          example: "5"
+                        inProgress:
+                          type: string
+                          example: "3"
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /manage-in-procees-files:
+    get:
+      tags:
+        - Файли замовлення на оцінці
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "1"
+                  customer:
+                    type: string
+                    example: "@petya"
+                  author:
+                    type: string
+                    example: "@petya"
+                  name:
+                    type: string
+                    example: Банківська система в період років великої депресії
+                  files:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        file1:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: Документ1.pdf
+                            link:
+                              type: string
+                              example: ""
+                        file2:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: правки.pdf
+                            link:
+                              type: string
+                              example: ""
+                        file3:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: правки.pdf
+                            link:
+                              type: string
+                              example: ""
+                        step:
+                          type: string
+                          example: "1"
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        name:
+                          type: string
+                          example: Велеров Іван Велерійович
+                        nickname:
+                          type: string
+                          example: "@petya"
+                        phone:
+                          type: string
+                          example: +380 663915620
+                        telegram:
+                          type: string
+                          example: "@valeron"
+                        rate:
+                          type: string
+                          example: "4.5"
+                        done:
+                          type: string
+                          format: date-time
+                          example: "10"
+                        canceled:
+                          type: string
+                          example: "5"
+                        inProgress:
+                          type: string
+                          example: "3"
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /orders-in-progress:
+    get:
+      tags:
+        - Замовлення в роботі
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        customer:
+                          type: string
+                          example: "@petya"
+                        deadline:
+                          type: string
+                          example: 18.01.2023
+                        topic:
+                          type: string
+                          example: Економіка
+                        type:
+                          type: string
+                          example: Курсова робота
+                        name:
+                          type: string
+                          example: Банківська система в період років великої депресії
+                        unique:
+                          type: string
+                          example: 50%
+                        garantee:
+                          type: string
+                          example: 7 днів
+                        readyToDo:
+                          type: string
+                          example: "1"
+                        author:
+                          type: string
+                          example: "@petya"
+                        price:
+                          type: string
+                          format: date
+                          example: "1000"
+                        authorPrice:
+                          type: string
+                          example: "500"
+                        discount:
+                          type: string
+                          example: 10%
+                        note:
+                          type: string
+                          example: перше замовлення
+                        paid:
+                          type: string
+                          example: "0"
+                        status:
+                          type: string
+                          example: success
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /order-authors:
+    get:
+      tags:
+        - Список авторів для замовлення
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        author:
+                          type: string
+                          example: Валера
+                        inProgress:
+                          type: string
+                          example: "4"
+                        rate:
+                          type: string
+                          example: "4.4"
+                        price:
+                          type: string
+                          example: "700"
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /my-orders:
+    get:
+      tags:
+        - Мої замовлення
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        date:
+                          type: string
+                          example: 18.01.2023
+                        topic:
+                          type: string
+                          example: Економіка
+                        type:
+                          type: string
+                          example: Курсова робота
+                        name:
+                          type: string
+                          example: Банківська система в період років великої депресії
+                        page_count:
+                          type: string
+                          example: "30"
+                        unique:
+                          type: string
+                          example: 50%
+                        garantee:
+                          type: string
+                          example: 1 тиждень
+                        readyToDo:
+                          type: string
+                          example: "2"
+                        note:
+                          type: string
+                          example: "-"
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /my-orders-info:
+    get:
+      tags:
+        - Моє замовлення
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "1"
+                  type:
+                    type: string
+                    example: Курсова робота
+                  name:
+                    type: string
+                    example: Банківська система в період років великої депресії
+                  page_count:
+                    type: string
+                    example: "30"
+                  files:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        file1:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: Методичка1.pdf
+                            link:
+                              type: string
+                              example: ""
+                        file2:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: Методичка1.pdf
+                            link:
+                              type: string
+                              example: ""
+                        file3:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: Методичка3.pdf
+                            link:
+                              type: string
+                              example: ""
+                        step:
+                          type: string
+                          example: "1"
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /order-topic:
+    get:
+      tags:
+        - Тема замовлення
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "1"
+                  topic:
+                    type: string
+                    example: Економіка
+                  type:
+                    type: string
+                    example: Курсова робота
+                  title:
+                    type: string
+                    example: Банківська система в період років великої депресії
+                  page_count:
+                    type: string
+                    example: "30"
+                  unique:
+                    type: string
+                    example: 50%
+                  garantee:
+                    type: string
+                    example: 1 тиждень
+                  note:
+                    type: string
+                    example: Бла бла бла бла бал бал ал абла балаб ла
+                  files:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: Методичка1.pdf
+                        link:
+                          type: string
+                          example: ""
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /owner-income:
+    get:
+      tags:
+        - Доходи
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        customer:
+                          type: string
+                          example: "@petya"
+                        manager:
+                          type: string
+                          example: "@ya"
+                        author:
+                          type: string
+                          example: "@Каtya"
+                        authorPrice:
+                          type: string
+                          example: "500"
+                        profit:
+                          type: string
+                          example: "200"
+                        status:
+                          type: string
+                          example: end
+                        date:
+                          type: string
+                          example: 10.12.2024
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /owner-payments:
+    get:
+      tags:
+        - Витрати
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        customer:
+                          type: string
+                          example: "@petya"
+                        manager:
+                          type: string
+                          example: "@ya"
+                        author:
+                          type: string
+                          example: "@Каtya"
+                        done:
+                          type: string
+                          format: date-time
+                          example: "10"
+                        price:
+                          type: string
+                          example: "700"
+                        authorPrice:
+                          type: string
+                          example: "500"
+                        paid:
+                          type: string
+                          example: 50%
+                        garentee:
+                          type: string
+                          example: 1 тиждень
+                        endGarantee:
+                          type: string
+                          example: 18.01.2024
+                        status:
+                          type: string
+                          example: pay
+                        profit:
+                          type: string
+                          example: "200"
+                        card:
+                          type: string
+                          example: 4444 1111 2222 5555
+                        pay:
+                          type: boolean
+                          example: true
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /owner-personal:
+    get:
+      tags:
+        - Персонал
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        role:
+                          type: string
+                          example: "1"
+                        name:
+                          type: string
+                          example: Шевченка Василь Петрович
+                        nickname:
+                          type: string
+                          example: "@vasya"
+                        phone:
+                          type: string
+                          example: +380 66 3615620
+                        telegram:
+                          type: string
+                          example: "@vasya"
+                        login:
+                          type: string
+                          example: Vasyan123
+                        pass:
+                          type: string
+                          example: hiuy&Y&hy0
+                        mono:
+                          type: string
+                          example: Mono
+                        card:
+                          type: string
+                          example: 4444 1111 2222 5555
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS

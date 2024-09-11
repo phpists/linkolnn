@@ -23,6 +23,7 @@ import { OwnerIncome } from "./pages/OwnerIncome/OwnerIncome";
 import { OwnerPersonal } from "./pages/OwnerPersonal/OwnerPersonal";
 import { NewPersonal } from "./pages/NewPersonal/NewPersonal";
 import { Alert } from "./components/Alert/Alert";
+import { SwaggerPage } from "./pages/SwaggerPage";
 
 function App() {
   const location = useLocation();
@@ -55,6 +56,7 @@ function App() {
     <div className="app-wrapper">
       <Routes>
         <Route element={<Auth />} path="/auth" />
+        <Route element={<SwaggerPage />} path="/swagger" />
         <Route
           path="*"
           element={

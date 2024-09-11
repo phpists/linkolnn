@@ -66,13 +66,7 @@ export const Table = ({ data }) => (
           <td></td>
           <td></td>
           <td></td>
-          <td>
-            {data
-              ?.map((v) => Number(v?.profit))
-              ?.reduce(
-                (accumulator, currentValue) => accumulator + currentValue
-              )}
-          </td>
+          <td>1200</td>
           <td></td>
           <td></td>
         </tr>

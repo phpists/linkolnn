@@ -1,0 +1,27 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        title:
+          type: string
+          example: Таблиця оригінальності
+        text:
+          type: string
+          example: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+            repellendus sed est perferendis eveniet praesentium natus
+            repudiandae expedita fugiat. Ab, harum facere aliquid commodi
+            laborum corrupti earum placeat voluptate rerum. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Iste repellendus sed est
+            perferendis eveniet praesentium natus repudiandae expedita fugiat.
+            Ab, harum facere aliquid commodi laborum corrupti earum placeat
+            voluptate rerum. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Iste repellendus sed est perferendis eveniet praesentium natus
+            repudiandae expedita fugiat. Ab, harum facere aliquid commodi
+            laborum corrupti earum placeat voluptate rerum. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Iste repellendus sed est
+            perferendis eveniet praesentium natus repudiandae expedita fugiat.
+            Ab, harum facere aliquid commodi laborum corrupti earum placeat
+            voluptate rerum."

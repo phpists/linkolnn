@@ -1,0 +1,26 @@
+type: object
+properties:
+  rate:
+    type: string
+    example: "4.5"
+  done:
+    type: string
+    example: "140"
+  canceled:
+    type: string
+    format: date-time
+    example: "11"
+  history:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        comment:
+          type: string
+          example: "-"
+        rate:
+          type: string
+          example: "5"

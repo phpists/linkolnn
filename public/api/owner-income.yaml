@@ -1,0 +1,31 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        customer:
+          type: string
+          example: "@petya"
+        manager:
+          type: string
+          example: "@ya"
+        author:
+          type: string
+          example: "@Каtya"
+        authorPrice:
+          type: string
+          example: "500"
+        profit:
+          type: string
+          example: "200"
+        status:
+          type: string
+          example: end
+        date:
+          type: string
+          example: 10.12.2024

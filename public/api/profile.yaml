@@ -1,0 +1,29 @@
+type: object
+properties:
+  role:
+    type: string
+    example: "1"
+  name:
+    type: string
+    example: Шевченка Василь Петрович
+  nickname:
+    type: string
+    example: "@vasya"
+  phone:
+    type: string
+    example: +380 66 3615620
+  telegram:
+    type: string
+    example: "@vasya"
+  login:
+    type: string
+    example: Vasyan123
+  pass:
+    type: string
+    example: hiuy&Y&hy0
+  bank:
+    type: string
+    example: Mono
+  card:
+    type: string
+    example: 4444 1111 2222 5555

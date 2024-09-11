@@ -1,0 +1,37 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        date:
+          type: string
+          example: 18.01.2023
+        topic:
+          type: string
+          example: Економіка
+        type:
+          type: string
+          example: Курсова робота
+        name:
+          type: string
+          example: Банківська система в період років великої депресії
+        page_count:
+          type: string
+          example: "30"
+        unique:
+          type: string
+          example: 50%
+        garantee:
+          type: string
+          example: 1 тиждень
+        readyToDo:
+          type: string
+          example: "2"
+        note:
+          type: string
+          example: "-"
