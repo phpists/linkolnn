@@ -1,0 +1,65 @@
+{
+  "id": "1",
+  "customer": "@petya",
+  "author": "@petya",
+  "name": "Банківська система в період років великої депресії",
+  "files": [
+    {
+      "file1": {
+        "name": "Документ1.pdf",
+        "link": ""
+      },
+      "file2": {
+        "name": "правки.pdf",
+        "link": ""
+      },
+      "file3": {
+        "name": "правки.pdf",
+        "link": ""
+      },
+      "step": "1"
+    },
+    {
+      "file1": {
+        "name": "Документ2.pdf",
+        "link": ""
+      },
+      "file2": {
+        "name": "Методичка2.pdf",
+        "link": ""
+      },
+      "file3": {
+        "name": "Методичка2.pdf",
+        "link": ""
+      },
+      "step": "2"
+    },
+    {
+      "file1": {
+        "name": "Документ3.pdf",
+        "link": ""
+      },
+      "file2": {
+        "name": "Методичка3.pdf",
+        "link": ""
+      },
+      "file3": {
+        "name": "Методичка3.pdf",
+        "link": ""
+      },
+      "step": "3"
+    },
+    {
+      "file1": {
+        "name": "Документ4.pdf",
+        "link": ""
+      },
+      "file2": { "name": "Документ4.pdf", "link": "" },
+      "file3": {
+        "name": "правки.pdf",
+        "link": ""
+      },
+      "step": "4"
+    }
+  ]
+}

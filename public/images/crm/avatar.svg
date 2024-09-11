@@ -1,0 +1,16 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip3_9232">
+			<rect id="icons/Pen/Filled" width="24.000000" height="24.000000" transform="translate(8.000000 8.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Avater" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<circle id="Ellipse 1" cx="20.000000" cy="20.000000" r="20.000000" fill="#FBFAF7" fill-opacity="1.000000"/>
+	<g clip-path="url(#clip3_9232)">
+		<path id="Shape" d="M29.16 24.83L24.83 29.16C24.09 29.9 22.9 29.9 22.16 29.16C21.79 28.79 21.79 28.2 22.16 27.83L27.83 22.16C28.2 21.79 28.79 21.79 29.16 22.16C29.9 22.9 29.9 24.09 29.16 24.83Z" fill="#94CF93" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Shape" d="M17.01 18.76C17.03 18.58 16.99 18.4 16.86 18.27L10.99 12.4C10.74 12.15 10.32 12.28 10.37 12.63L11.54 20.78C11.82 22.79 13.1 24.51 14.94 25.37L18.86 27.2C19.24 27.38 19.69 27.3 19.99 27L27 19.99C27.3 19.69 27.38 19.24 27.2 18.86L25.37 14.94C24.51 13.1 22.79 11.82 20.78 11.54L12.64 10.37C12.28 10.32 12.15 10.74 12.41 10.99L18.27 16.86C18.4 16.99 18.58 17.03 18.76 17.01C18.84 17 18.92 17 19 17C20.1 17 21 17.89 21 19C21 20.1 20.1 21 19 21C17.89 21 17 20.1 17 19C17 18.92 17 18.84 17.01 18.76Z" fill="#94CF93" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

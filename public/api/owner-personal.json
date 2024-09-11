@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "role": "1",
+      "name": "Шевченка Василь Петрович",
+      "nickname": "@vasya",
+      "phone": "+380 66 3615620",
+      "telegram": "@vasya",
+      "login": "Vasyan123",
+      "pass": "hiuy&Y&hy0",
+      "mono": "Mono",
+      "card": "4444 1111 2222 5555"
+    },
+    {
+      "role": "2",
+      "name": "Шевченка Василь Петрович",
+      "nickname": "@vasya",
+      "phone": "+380 66 3615620",
+      "telegram": "@vasya",
+      "login": "Vasyan123",
+      "pass": "hiuy&Y&hy0",
+      "mono": "Mono",
+      "card": "4444 1111 2222 5555"
+    },
+    {
+      "role": "1",
+      "name": "Шевченка Василь Петрович",
+      "nickname": "@vasya",
+      "phone": "+380 66 3615620",
+      "telegram": "@vasya",
+      "login": "Vasyan123",
+      "pass": "hiuy&Y&hy0",
+      "mono": "Mono",
+      "card": "4444 1111 2222 5555"
+    },
+    {
+      "role": "2",
+      "name": "Шевченка Василь Петрович",
+      "nickname": "@vasya",
+      "phone": "+380 66 3615620",
+      "telegram": "@vasya",
+      "login": "Vasyan123",
+      "pass": "hiuy&Y&hy0",
+      "mono": "Mono",
+      "card": "4444 1111 2222 5555"
+    }
+  ]
+}
