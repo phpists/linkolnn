@@ -1,6 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+
+const LINKS = [
+  { title: "Про нас", link: "/about-us" },
+  { title: "Ціни", link: "/prices" },
+  { title: "Відгуки", link: "/reviews" },
+  { title: "Часті запитання", link: "/faq" },
+  { title: "Програма лояльності", link: "/promotion" },
+];
 
 export const Header = () => {
+  const location = useLocation();
+
   return (
     <header class="main-header">
       <div class="container">
@@ -13,21 +23,15 @@ export const Header = () => {
           <div class="divider"></div>
           <div class="menu-block">
             <ul class="menu-block__list">
-              <li class="menu-block__item active">
-                <NavLink to="/about-us">Про нас</NavLink>
-              </li>
-              <li class="menu-block__item">
-                <NavLink to="/prices">Ціни</NavLink>
-              </li>
-              <li class="menu-block__item">
-                <NavLink to="/reviews">Відгуки</NavLink>
-              </li>
-              <li class="menu-block__item">
-                <NavLink to="/faq">Часті запитання</NavLink>
-              </li>
-              <li class="menu-block__item">
-                <NavLink to="/promotion">Програма лояльності</NavLink>
-              </li>
+              {LINKS?.map(({ title, link }) => (
+                <li
+                  class={`menu-block__item ${
+                    location?.pathname === link && "active"
+                  }`}
+                >
+                  <NavLink to={link}>{title}</NavLink>
+                </li>
+              ))}
             </ul>
             <div class="social-block">
               <ul class="social-block__list">

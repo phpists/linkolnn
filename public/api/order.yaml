@@ -1,0 +1,38 @@
+type: object
+properties:
+  worktype:
+    type: string
+    example: lesson1
+  deadline:
+    type: string
+    example: lesson1
+  lesson:
+    type: string
+    example: lesson1
+  warranty:
+    type: string
+    example: lesson1
+  count:
+    type: string
+    example: "32"
+  theme:
+    type: string
+    example: Тест
+  contact:
+    type: string
+    format: date-time
+    example: "232345"
+  uniq:
+    type: string
+    example: ""
+  note:
+    type: string
+    example: тест тест
+  agree:
+    type: boolean
+    example: true
+  files:
+    type: array
+    items:
+      type: string
+      format: nullable

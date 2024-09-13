@@ -1,0 +1,17 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        title:
+          type: string
+          example: Як зробити замовлення?
+        text:
+          type: string
+          example: Ви можете зареєструватись на замовити роботу на сайті або в менеджера
+            через Instagram чи Telegram, як вам зручно.

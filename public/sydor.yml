@@ -95,3 +95,99 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
       x-swagger-router-controller: SystemOPS
+  /faq:
+    get:
+      tags:
+        - FAQ
+      summary: GET
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: "1"
+                        title:
+                          type: string
+                          example: Як зробити замовлення?
+                        text:
+                          type: string
+                          example:
+                            Ви можете зареєструватись на замовити роботу на сайті або в менеджера
+                            через Instagram чи Telegram, як вам зручно.
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS
+  /order:
+    post:
+      tags:
+        - Нове замовлення
+      summary: POST
+      operationId: get_sysStatus
+      responses:
+        "200":
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  worktype:
+                    type: string
+                    example: lesson1
+                  deadline:
+                    type: string
+                    example: lesson1
+                  lesson:
+                    type: string
+                    example: lesson1
+                  warranty:
+                    type: string
+                    example: lesson1
+                  count:
+                    type: string
+                    example: "32"
+                  theme:
+                    type: string
+                    example: Тест
+                  contact:
+                    type: string
+                    format: date-time
+                    example: "232345"
+                  uniq:
+                    type: string
+                    example: ""
+                  note:
+                    type: string
+                    example: тест тест
+                  agree:
+                    type: boolean
+                    example: true
+                  files:
+                    type: array
+                    items:
+                      type: string
+                      format: nullable
+
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-swagger-router-controller: SystemOPS

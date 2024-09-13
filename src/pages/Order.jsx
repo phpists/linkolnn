@@ -1,10 +1,23 @@
+import axios from "axios";
+
 export const Order = () => (
   <section class="order bg-block float-header">
     <div class="container">
       <div class="order__inner">
         <h1 class="title-page">Замовити</h1>
         <div class="block">
-          <form action="">
+          <form
+            action=""
+            onSubmit={(e) => {
+              e.preventDefault();
+              const data = new FormData(e.target);
+
+              // Do a bit of work to convert the entries to a plain JS object
+              const value = Object.fromEntries(data.entries());
+
+              axios.post("/test", value);
+            }}
+          >
             <div class="reg-text">Зареєструйтеся щоб дізнатись вартість</div>
             <div class="icon-text">У вас діє знижка на це замодення 20%</div>
             <div class="block__inner">
@@ -13,7 +26,7 @@ export const Order = () => (
                   Вид роботи
                 </label>
                 <select
-                  name=""
+                  name="worktype"
                   id="worktype"
                   class="custom-select"
                   data-minimum-results-for-search="-1"
@@ -31,7 +44,7 @@ export const Order = () => (
                   Дедлайн
                 </label>
                 <select
-                  name=""
+                  name="deadline"
                   id="deadline"
                   class="custom-select"
                   data-minimum-results-for-search="-1"
@@ -49,7 +62,7 @@ export const Order = () => (
                   Предмет
                 </label>
                 <select
-                  name=""
+                  name="lesson"
                   id="lesson"
                   class="custom-select"
                   data-minimum-results-for-search="-1"
@@ -67,7 +80,7 @@ export const Order = () => (
                   Гарантійний термін
                 </label>
                 <select
-                  name=""
+                  name="warranty"
                   id="warranty"
                   class="custom-select"
                   data-minimum-results-for-search="-1"
@@ -85,6 +98,7 @@ export const Order = () => (
                   Кількість сторінок
                 </label>
                 <input
+                  name="count"
                   type="text"
                   class="input-line input-line__small"
                   id="count"
@@ -99,6 +113,7 @@ export const Order = () => (
                   type="text"
                   class="input-line input-line__small"
                   id="theme"
+                  name="theme"
                   placeholder="Введіть термін"
                 />
               </div>
@@ -118,6 +133,7 @@ export const Order = () => (
                   type="text"
                   class="input-line input-line__small"
                   id="contact"
+                  name="contact"
                   placeholder="Введіть номер або нікнейм"
                 />
               </div>
@@ -137,6 +153,7 @@ export const Order = () => (
                     type="text"
                     class="input-line input-line__small"
                     id="uniq-text"
+                    name="uniq"
                     placeholder="Введіть відсоток"
                   />
                 </div>
@@ -167,7 +184,7 @@ export const Order = () => (
               </div>
               <div class="item wide">
                 <textarea
-                  name=""
+                  name="note"
                   id=""
                   class="textarea-line"
                   placeholder="Коментар про додаткові вимоги (не обов’язково)"
@@ -175,7 +192,7 @@ export const Order = () => (
               </div>
               <div class="item wide">
                 <div class="custom-checkbox">
-                  <input type="checkbox" id="agree" />
+                  <input type="checkbox" id="agree" name="agree" />
                   <label for="agree">
                     Я даю згоду на обробку своїх персональних даних у
                     відповідності з політикою конфіденційності та приймаю умови
@@ -184,9 +201,7 @@ export const Order = () => (
                 </div>
               </div>
               <div class="btn-block">
-                <button class="btn" disabled>
-                  Розрахувати вартість
-                </button>
+                <button class="btn">Розрахувати вартість</button>
               </div>
             </div>
           </form>
