@@ -1,0 +1,28 @@
+type: object
+properties:
+  data:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Розмноження савці в умовах когнітивної кризи
+        status:
+          type: boolean
+          example: true
+        type:
+          type: string
+          example: Реферат
+        object:
+          type: string
+          example: Біологія
+        deadline:
+          type: string
+          example: 11.02.2023
+        id:
+          type: string
+          example: 4058-245
+        price:
+          type: string
+          example: "455"

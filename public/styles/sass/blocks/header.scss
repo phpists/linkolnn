@@ -1,0 +1,244 @@
+.main-header {
+	border-bottom: 1px solid rgb(230, 232, 236);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 4;
+	@include mobile {
+		background: #F4F5F6;
+	}
+	&__inner {
+		padding: 40px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		@include mobile {
+			flex-wrap: wrap;
+			padding: 16px 0 0 0;
+			gap: 0;
+		}
+		.logo {
+			display: block;
+			@include mobile {
+				img {
+					max-height: 33px;
+				}
+			}
+			&-block {
+				@include mobile {
+					order: 1;
+				}
+			}
+		}
+		.divider {
+			background: #E6E8EC;
+			height: 48px;
+			width: 1px;
+			@include tablet {
+				width: 100%;
+				background: transparent;
+			}
+			@include mobile {
+				display: none;
+			}
+		}
+		.mobile-menu {
+			display: none;
+			width: 32px;
+			height: 32px;
+			background: url(./../images/icons/menu.svg) no-repeat;
+			background-position: 50% 50%;
+			border: 0;
+			margin-left: 30px;
+			@include tablet {
+				display: block;
+			}
+			@include mobile {
+				order: 2;
+			}
+		}
+	}
+}
+
+.menu-block {
+	@include tablet {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: $bgcolor;
+		padding: 20px 32px;
+		margin-top: 1px;
+	}
+	@include mobile {
+		background: #FCFCFD;
+		padding: 0;
+		padding-top: 40px;
+		z-index: 999;
+		padding-bottom: 40px;
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		@include tablet {
+			justify-content: center;
+		}
+		@include mobile {
+			display: block;
+		}
+	}
+	&__item {
+		a {
+			display: block;
+			padding: 4px 8px;
+			color: $color-menu;
+			font-weight: 700;
+			position: relative;
+			@include mobile {
+				font-size: 24px;
+				padding: 16px 20px;
+			}
+		}
+		&.active {
+			a {
+				color: $maincolor;
+				@include mobile {
+					padding-left: 28px;
+					&:before {
+						content: '';
+						width: 4px;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						background: $btnbgcolor;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	.social-block {
+		display: none;
+		margin-left: 20px;
+		margin-top: 28px;
+		@include mobile {
+			display: block;
+		}
+		&__list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		&__item {
+			display: block;
+			a {
+				display: flex;
+				align-items: center;
+				padding: 12px 0;
+				font-weight: 600;
+				color: #777E90;
+				.icon {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+.right-block {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	&.profile-header {
+		gap: 12px;
+		.social-list {
+			margin-right: 28px;
+		}
+	}
+	.mobile-btn {
+		display: none;
+		@include mobile {
+			display: block;
+		}
+	}
+	.profile-mobile {
+		display: none;
+		width: 50%;
+		height: 40px;
+		@include mobile {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		b {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 14px;
+			font-weight: 700;
+			color: #FCFCFD;
+			&:after {
+				content: '';
+				display: block;
+				background: url(./../images/icons/profile-down.svg) no-repeat;
+				width: 24px;
+				height: 24px;
+				margin-left: 12px;
+				background-position: 50% 50%;
+			}
+		}
+	}
+	.profile-btn {
+		width: 40px;
+		height: 40px;
+		background: #FA9116;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include mobile {
+			display: none;
+		}
+		span {
+			display: block;
+			background: url(./../images/icons/profile.svg) no-repeat;
+			background-position: 50% 50%;
+			width: 24px;
+			height: 24px;
+		}
+	}
+	@include mobile {
+		order: 3;
+		gap: 8px;
+		padding: 16px 20px;
+		border-top: 1px solid #E6E8EC;
+		margin-right: -20px;
+		margin-left: -20px;
+		width: calc(100% + 64px);
+		margin-top: 16px;
+		.btn {
+			width: 50%;
+		}
+	}
+}
+
+.social-list {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	@include mobile {
+		display: none;
+	}
+	&__item {
+		list-style: none;
+	}
+}

@@ -1,0 +1,44 @@
+.pagination {
+  display: flex;
+  gap: 5px;
+  border: 1px solid #E6E8EC;
+  border-radius: 24px;
+  padding: 8px;
+  &-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+    @include mobile {
+      margin-bottom: 100px;
+    }
+  }
+  .item {
+    font-size: 13px;
+    font-weight: 600;
+    color: #353945;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.arrow {
+      span {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background: url(./../images/icons/arrow-left.svg) no-repeat;
+        background-position: 50% 50%;
+      }
+      &.next {
+        span {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &.active:not(.arrow) {
+      background: #29A361;
+      color: #fff;
+    }
+  }
+}

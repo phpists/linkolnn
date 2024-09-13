@@ -1,0 +1,47 @@
+.presentation-block {
+  padding-bottom: 160px;
+  @include mobile {
+    padding-bottom: 40px;
+  }
+  &__inner {
+    display: flex;
+    gap: 20px;
+    @include mobile {
+      display: block;
+    }
+    .text-block {
+      @include tablet {
+        width: 60%;
+      }
+      @include mobile {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+      .text {
+        color: #777E90;
+        margin-bottom: 40px;
+        max-width: 448px;
+      }
+      .btn-block {
+        @include mobile {
+          text-align: center;
+        }
+      }
+    }
+    .img-block {
+      @include tablet {
+        width: 40%;
+      }
+      @include mobile {
+        width: 100%;
+        padding: 0 20px;
+      }
+      img {
+        max-width: 630px;
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.warranty {
+  padding: 80px 0 140px;
+  text-align: center;
+  @include mobile {
+    padding: 64px 0;
+  }
+  .desc {
+    max-width: 656px;
+  }
+  &__block {
+    box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+    background: #FCFCFD;
+    border-radius: 20px;
+    padding: 48px 80px;
+    display: flex;
+    gap: 60px;
+    @include mobile {
+      padding: 48px 14px;
+      gap: 24px;
+      flex-direction: column;
+    }
+  }
+  &__item {
+    text-align: left;
+    padding-left: 44px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(./../images/icons/check.svg) no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .name {
+      font-weight: 600;
+      color: #141416;
+      margin-bottom: 8px;
+    }
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      color: #777E90;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.stocks {
+  padding: 80px 0;
+  background-position: 50% 73% !important;
+  @include mobile {
+    padding: 40px 0 64px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      display: block;
+    }
+    .text-block {
+      width: 41%;
+      padding-right: 37px;
+      @include mobile {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 16px;
+      }
+      .text {
+        color: #777E91;
+        margin-bottom: 20px;
+      }
+      .btn-block {
+        @include mobile {
+          text-align: center;
+        }
+      }
+    }
+    .img-block {
+      width: 59%;
+      @include mobile {
+        width: 100%;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.about-us {
+  padding-bottom: 160px;
+  @include mobile {
+    padding-bottom: 64px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 40% 130px 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-row-gap: 64px;
+    grid-template-areas: 
+    'img . text'
+    'img . info';
+    @include tablet {
+      grid-template-columns: 40% 60px 1fr;
+      grid-template-rows: min-content 1fr;
+    }
+    @include mobile {
+      display: block;
+    }
+    .img-block {
+      grid-area: img;
+      @include mobile {
+        margin-bottom: 40px;
+      }
+      img {
+        border-radius: 16px;
+        width: 100%;
+      }
+    }
+    .text-block {
+      grid-area: text;
+      @include mobile {
+        margin-bottom: 40px;
+      }
+      .text {
+        color: #777E90;
+      }
+    }
+    .info-block {
+      grid-area: info;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 32px;
+      row-gap: 24px;
+      @include mobile {
+        column-gap: 0;
+        row-gap: 40px;
+      }
+      .item {
+        width: calc(50% - 16px);
+        @include mobile {
+          width: 100%;
+          max-width: 262px;
+          border-bottom: 1px solid #E6E8EC;
+          padding-bottom: 12px;
+        }
+        .number {
+          color: #FCFCFD;
+          font-size: 14px;
+          font-weight: 500;
+          background: #29A361;
+          border-radius: 100px;
+          padding: 3px 12px;
+          display: inline-block;
+          margin-bottom: 24px;
+        }
+        .name {
+          font-weight: 600;
+          color: #141416;
+          margin-bottom: 16px;
+        }
+        .text {
+          font-size: 14px;
+          color: #777E90;
+        }
+        &:first-child,
+        &:nth-child(2) {
+          &:after {
+            content: '';
+            display: block;
+            width: 160px;
+            height: 1px;
+            background: #777E90;
+            margin-top: 16px;
+            @include mobile {
+              display: none;
+            }
+          }
+        }
+        &:nth-child(2) {
+          .number {
+            background: #FA9116;
+          }
+        }
+        &:nth-child(3) {
+          .number {
+            background: #DD1581;
+          }
+        }
+        &:nth-child(4) {
+          .number {
+            background: #3772FF;
+          }
+        }
+      }
+    }
+  }
+}

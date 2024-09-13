@@ -1,32 +1,35 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Auth } from "./pages/Auth/Auth";
-import { Header } from "./components/Header/Header";
+import { Header } from "./components/Header";
+import { Login } from "./pages/Login";
+import { Registration } from "./pages/Registration";
+import { ForgotPassword } from "./pages/ForgotPassword";
+import { ResetPassword } from "./pages/ResetPassword";
+import { NewPassword } from "./pages/NewPassword";
+import { ResetPasswordSuccess } from "./pages/ResetPasswordSuccess";
+import { Dashboard } from "./pages/Dashboard";
+import { AboutUs } from "./pages/AboutUs";
+import { Prices } from "./pages/Prices";
+import { Reviews } from "./pages/Reviews";
+import { Promotion } from "./pages/Promotion";
+import { Faq } from "./pages/Faq";
+import { Order } from "./pages/Order";
+import { Profile } from "./pages/Profile/Profile";
 import { Footer } from "./components/Footer";
-import { MyOrdersList } from "./pages/MyOrdersList/MyOrdersList";
-import { MyOrdersTopic } from "./pages/MyOrdersTopic/MyOrdersTopic";
-import { MyOrders } from "./pages/MyOrders/MyOrders";
-import { MyOrdersManage } from "./pages/MyOrdersManage/MyOrdersManage";
-import { Rating } from "./pages/Rating/Rating";
-import { Instructions } from "./pages/Instructions/Instructions";
 import { useEffect } from "react";
-import { ManagerRating } from "./pages/ManagerRating/ManagerRating";
-import { ManagerManage } from "./pages/ManagerManage/ManagerManage";
-import { ManagerInProccess } from "./pages/ManagerInProccess/ManagerInProccess";
-import { ManagerInProccessManage } from "./pages/ManagerInProccessManage/ManagerInProccessManage";
-import { ManagerAuthors } from "./pages/ManagerAuthors/ManagerAuthors";
-import { ManagerNewAuthor } from "./pages/ManagerNewAuthor/ManagerNewAuthor";
-import { ManagerNewOrder } from "./pages/ManagerNewOrder/ManagerNewOrder";
-import { OwnerPayments } from "./pages/OwnerPayments/OwnerPayments";
-import { OwnerIncome } from "./pages/OwnerIncome/OwnerIncome";
-import { OwnerPersonal } from "./pages/OwnerPersonal/OwnerPersonal";
-import { NewPersonal } from "./pages/NewPersonal/NewPersonal";
-import { Alert } from "./components/Alert/Alert";
 import { SwaggerPage } from "./pages/SwaggerPage";
 
 function App() {
   const location = useLocation();
+  const WITH_OUT_FOOTER = [
+    "/login",
+    "/registration",
+    "/reset-password",
+    "/new-password",
+    "/new-password-success",
+    "/forgot-password",
+  ];
 
   const handleAddScript = (src, id) => {
     const isExist = document.querySelector(`#${id}`);
@@ -41,71 +44,45 @@ function App() {
   };
 
   const handleAddScripts = () => {
-    handleAddScript("js/crm.min.js", "crmScript");
+    handleAddScript("./js/app.min.js", "crmScript");
   };
 
   useEffect(() => {
     handleAddScripts();
+    window.scrollTo({ top: 0 });
   }, [location]);
 
   useEffect(() => {
     handleAddScripts();
   }, []);
 
+  if (location.pathname === "/swagger") {
+    return <SwaggerPage />;
+  }
+
   return (
-    <div className="app-wrapper">
+    <div>
+      <Header />
       <Routes>
-        <Route element={<Auth />} path="/auth" />
-        <Route element={<SwaggerPage />} path="/swagger" />
+        <Route element={<Login />} path="/login" />
+        <Route element={<Registration />} path="/registration" />
+        <Route element={<ForgotPassword />} path="/forgot-password" />
+        <Route element={<ResetPassword />} path="/reset-password" />
+        <Route element={<NewPassword />} path="/new-password" />
         <Route
-          path="*"
-          element={
-            <>
-              <div>
-                <Header />
-                <Routes>
-                  <Route element={<MyOrdersList />} path="/" />
-                  <Route element={<MyOrdersTopic />} path="/my-orders-topic" />
-                  <Route element={<MyOrders />} path="/my-orders" />
-                  <Route
-                    element={<MyOrdersManage />}
-                    path="/my-orders-manage"
-                  />
-                  <Route element={<Rating />} path="/rating" />
-                  <Route element={<Instructions />} path="/instructions" />
-                  <Route element={<ManagerRating />} path="/manager-rating" />
-                  <Route element={<ManagerManage />} path="/manager-manage" />
-                  <Route
-                    element={<ManagerInProccess />}
-                    path="/manager-in-proccess"
-                  />{" "}
-                  <Route
-                    element={<ManagerInProccessManage />}
-                    path="/manager-in-proccess-manage"
-                  />
-                  <Route element={<ManagerAuthors />} path="/manager-authors" />
-                  <Route
-                    element={<ManagerNewAuthor />}
-                    path="/manager-author"
-                  />
-                  <Route element={<ManagerNewOrder />} path="/manager-order" />
-                  <Route element={<OwnerPayments />} path="/owner-payments" />
-                  <Route element={<OwnerIncome />} path="/owner-income" />
-                  <Route element={<OwnerPersonal />} path="/owner-personal" />
-                  <Route element={<NewPersonal />} path="/owner-new-personal" />
-                  <Route element={<ManagerRating />} path="/owner-rating" />
-                  <Route
-                    element={<ManagerInProccess />}
-                    path="/owner-in-proccess"
-                  />{" "}
-                  <Route element={<ManagerAuthors />} path="/owner-authors" />
-                </Routes>
-              </div>
-              <Footer />
-            </>
-          }
-        />
+          element={<ResetPasswordSuccess />}
+          path="/new-password-success"
+        />{" "}
+        <Route element={<Dashboard />} path="/" />
+        <Route element={<AboutUs />} path="/about-us" />
+        <Route element={<Prices />} path="/prices" />
+        <Route element={<Reviews />} path="/reviews" />
+        <Route element={<Promotion />} path="/promotion" />
+        <Route element={<Faq />} path="/faq" />
+        <Route element={<Order />} path="/order" />
+        <Route element={<Profile />} path="/profile" />
       </Routes>
+      {!WITH_OUT_FOOTER.includes(location.pathname) && <Footer />}
     </div>
   );
 }

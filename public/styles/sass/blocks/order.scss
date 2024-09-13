@@ -1,0 +1,120 @@
+.order {
+  padding-bottom: 80px;
+  .block {
+    box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1);
+    border-radius: 20px;
+    padding: 48px 80px;
+    background: #FCFCFD;
+    @include mobile {
+      padding: 48px 0 24px 0;
+    }
+    .reg-text {
+      font-weight: 700;
+      color: #FA9116;
+      margin-bottom: 16px;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+    .icon-text {
+      font-size: 14px;
+      color: #1F7949;
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 40px;
+      &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(./../images/icons/sale.svg) no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+    &__inner {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      @include mobile {
+        gap: 20px;
+      }
+      .item {
+        width: calc(50% - 20px);
+        @include mobile {
+          width: 100%;
+        }
+        &.wide {
+          width: 100%;
+        }
+        .input-hidden {
+          display: none;
+        }
+        .warn {
+          color: #777E90;
+          font-size: 13px;
+          font-weight: 500;
+        }
+        .load-file {
+          border-radius: 16px;
+          border: 1px dashed #B1B5C3;
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .icon-text {
+            color: #777E90;
+            margin-bottom: 8px;
+            font-weight: 500;
+            &:before {
+              background-image: url(./../images/icons/file.svg);
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .require {
+            font-size: 14px;
+            font-weight: 500;
+            color: #777E90;
+          }
+        }
+        .file-list {
+          margin-top: 12px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          &__item {
+            display: flex;
+            align-items: center;
+            .name {
+              width: 180px;
+              height: 32px;
+              background: #29A361;
+              color: #FCFCFD;
+              padding: 0px 8px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              line-height: 32px;
+            }
+            .del {
+              width: 24px;
+              height: 24px;
+              border: 0;
+              padding: 0;
+              background: url(./../images/icons/del.svg) no-repeat;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+      .btn-block {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,11 +1,8 @@
 {
-  "role": "1",
-  "name": "Шевченка Василь Петрович",
-  "nickname": "@vasya",
-  "phone": "+380 66 3615620",
-  "telegram": "@vasya",
-  "login": "Vasyan123",
-  "pass": "hiuy&Y&hy0",
-  "bank": "Mono",
-  "card": "4444 1111 2222 5555"
+  "name": "Шавченко ірина миколаївна",
+  "phone": "4567",
+  "email": "forexsample@gmail.com",
+  "telegram": "forexample",
+  "university": "ККБАД",
+  "course": "3"
 }
