@@ -16,9 +16,7 @@ export const Faq = () => {
           <div class="accordion__list">
             {data?.map(({ title, text }, i) => (
               <div class="accordion__item" key={i}>
-                <div class="accordion__trigger" href="">
-                  {title}
-                </div>
+                <div class="accordion__trigger">{title}</div>
                 <div class="accordion__content">
                   {text}
                   <div class="btn-block">

@@ -4,7 +4,7 @@ const LINKS = [
   { title: "Про нас", link: "/about-us" },
   { title: "Ціни", link: "/prices" },
   { title: "Відгуки", link: "/reviews" },
-  { title: "Часті запитання", link: "/faq" },
+  { title: "Часті запитання", link: "/faq", reload: true },
   { title: "Програма лояльності", link: "/promotion" },
 ];
 
@@ -23,13 +23,17 @@ export const Header = () => {
           <div class="divider"></div>
           <div class="menu-block">
             <ul class="menu-block__list">
-              {LINKS?.map(({ title, link }) => (
+              {LINKS?.map(({ title, link, reload }) => (
                 <li
                   class={`menu-block__item ${
                     location?.pathname === link && "active"
                   }`}
                 >
-                  <NavLink to={link}>{title}</NavLink>
+                  {reload ? (
+                    <a href={link}>{title}</a>
+                  ) : (
+                    <NavLink to={link}>{title}</NavLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -54,26 +58,53 @@ export const Header = () => {
               </ul>
             </div>
           </div>
-          <div class="right-block">
-            <ul class="social-list">
-              <li class="social-list__item">
-                <a href="">
-                  <img src="images/icons/telegram.svg" alt="" />
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a href="">
-                  <img src="images/icons/instagram.svg" alt="" />
-                </a>
-              </li>
-            </ul>
-            <NavLink to="/order" className="btn btn-small mobile-btn">
-              Замовити
-            </NavLink>
-            <NavLink to="/registration" className="btn btn-small btn-outter">
-              Реєстрація{" "}
-            </NavLink>
-          </div>
+          {location.pathname.includes("profile") ? (
+            <div class="right-block profile-header">
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a href="">
+                    <img src="images/icons/telegram.svg" alt="" />
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="">
+                    <img src="images/icons/instagram.svg" alt="" />
+                  </a>
+                </li>
+              </ul>
+              <NavLink to="/order" className="btn btn-small mobile-btn">
+                Замовити
+              </NavLink>
+              <NavLink to="/profile" className="profile-btn">
+                <span></span>
+              </NavLink>
+              <NavLink className="btn btn-small btn-orange profile-mobile">
+                <b>Профіль</b>
+              </NavLink>
+            </div>
+          ) : (
+            <div class="right-block">
+              <ul class="social-list">
+                <li class="social-list__item">
+                  <a href="">
+                    <img src="images/icons/telegram.svg" alt="" />
+                  </a>
+                </li>
+                <li class="social-list__item">
+                  <a href="">
+                    <img src="images/icons/instagram.svg" alt="" />
+                  </a>
+                </li>
+              </ul>
+              <NavLink to="/order" className="btn btn-small mobile-btn">
+                Замовити
+              </NavLink>
+              <NavLink to="/registration" className="btn btn-small btn-outter">
+                Реєстрація{" "}
+              </NavLink>
+            </div>
+          )}
+
           <button class="mobile-menu"></button>
         </div>
       </div>

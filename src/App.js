@@ -31,10 +31,14 @@ function App() {
     "/forgot-password",
   ];
 
-  const handleAddScript = (src, id) => {
+  const handleAddScript = (src, id, isOnce) => {
     const isExist = document.querySelector(`#${id}`);
     if (isExist) {
-      isExist.remove();
+      if (isOnce) {
+        return;
+      } else {
+        isExist.remove();
+      }
     }
     const body = document.querySelector("body");
     const script = document.createElement("script");
@@ -44,7 +48,8 @@ function App() {
   };
 
   const handleAddScripts = () => {
-    handleAddScript("./js/app.min.js", "crmScript");
+    handleAddScript("./js/app-main.min.js", "crmScript", true);
+    handleAddScript("./js/app.min.js", "crmScript2", true);
   };
 
   useEffect(() => {

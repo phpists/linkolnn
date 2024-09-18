@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Dashboard = () => (
   <div>
     <section class="presentation-block bg-block float-header">
@@ -14,9 +16,9 @@ export const Dashboard = () => (
               надати необхідну підтримку для вашого освітнього прогресу.{" "}
             </div>
             <div class="btn-block">
-              <a href="" class="btn">
+              <NavLink to="/prices" className="btn">
                 Дізнатись ціну
-              </a>
+              </NavLink>
             </div>
           </div>
           <div class="img-block">

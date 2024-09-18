@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Prices = () => (
   <div>
     <section class="price-block wide bg-block float-header">
@@ -30,9 +32,9 @@ export const Prices = () => (
                 200
                 <b>грн</b>
               </div>
-              <a href="" class="btn">
+              <NavLink to="/order" className="btn">
                 Замовити
-              </a>
+              </NavLink>
             </div>
             <div class="price-block__item">
               <div class="name">Курсова робота</div>
@@ -59,9 +61,9 @@ export const Prices = () => (
                 800
                 <b>грн</b>
               </div>
-              <a href="" class="btn">
+              <NavLink to="/order" className="btn">
                 Замовити
-              </a>
+              </NavLink>
             </div>
             <div class="price-block__item">
               <div class="name">Дипломна робота</div>
@@ -88,9 +90,9 @@ export const Prices = () => (
                 4000
                 <b>грн</b>
               </div>
-              <a href="" class="btn">
+              <NavLink to="/order" className="btn">
                 Замовити
-              </a>
+              </NavLink>
             </div>
             <div class="price-block__item">
               <div class="name">Звіт з практики</div>
@@ -117,9 +119,9 @@ export const Prices = () => (
                 800
                 <b>грн</b>
               </div>
-              <a href="" class="btn">
+              <NavLink to="/order" className="btn">
                 Замовити
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

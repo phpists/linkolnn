@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Header } from "../components/Header";
 
 export const Login = () => {
@@ -8,7 +9,8 @@ export const Login = () => {
           <form action="">
             <h1 class="title-block">Вхід</h1>
             <div class="exist">
-              Увійдіть в свій акаунт або <a href="">зарееструйтеся</a>
+              Увійдіть в свій акаунт або{" "}
+              <NavLink to="/registration">зарееструйтеся</NavLink>
             </div>
             <div class="input-group">
               <label for="email" class="input-label">
@@ -28,10 +30,15 @@ export const Login = () => {
               </div>
             </div>
             <div class="btn-block">
-              <button class="btn">Увійти</button>
-              <a href="" class="btn btn-outter__orange btn-without-border">
+              <NavLink to="/profile" className="btn">
+                Увійти
+              </NavLink>
+              <NavLink
+                to="/forgot-password"
+                className="btn btn-outter__orange btn-without-border"
+              >
                 Забули пароль?
-              </a>
+              </NavLink>
             </div>
           </form>
         </div>

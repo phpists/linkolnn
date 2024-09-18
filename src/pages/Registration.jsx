@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Registration = () => (
   <div class="login-page">
     <div class="login-page__inner">
@@ -5,7 +7,7 @@ export const Registration = () => (
         <form action="">
           <h1 class="title-block">Реєстрація</h1>
           <div class="exist">
-            Вже є аккаунт? <a href="">Увійти</a>
+            Вже є аккаунт? <NavLink to="/login">Увійти</NavLink>
           </div>
           <div class="input-group">
             <label for="email" class="input-label">
