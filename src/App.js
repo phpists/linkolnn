@@ -49,7 +49,7 @@ function App() {
 
   const handleAddScripts = () => {
     handleAddScript("./js/app-main.min.js", "crmScript", true);
-    handleAddScript("./js/app.min.js", "crmScript2", true);
+    handleAddScript("./js/app.min.js", "crmScript2");
   };
 
   useEffect(() => {
