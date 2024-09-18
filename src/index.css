@@ -17,3 +17,9 @@ code {
     color: #999;
   }
 }
+
+.swagger-ui {
+  .errors-wrapper {
+    display: none;
+  }
+}
