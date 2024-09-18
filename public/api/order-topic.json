@@ -8,8 +8,8 @@
   "garantee": "1 тиждень",
   "note": "Бла бла бла бла бал бал ал абла балаб ла",
   "files": [
-    { "name": "Методичка1.pdf", "link": "" },
-    { "name": "Методичка2.pdf", "link": "" },
-    { "name": "план1.pdf", "link": "" }
+    { "name": "Методичка1.pdf", "link": "/mocks/pdf-blank.pdf" },
+    { "name": "Методичка2.pdf", "link": "/mocks/pdf-blank.pdf" },
+    { "name": "план1.pdf", "link": "/mocks/pdf-blank.pdf" }
   ]
 }

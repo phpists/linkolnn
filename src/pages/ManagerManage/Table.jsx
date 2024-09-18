@@ -29,7 +29,7 @@ export const Table = ({ data }) => (
             <td>{price}</td>
             <td>
               <div class="custom-checkbox">
-                <input type="checkbox" name="id1" id="id1" checked />
+                <input type="checkbox" name="id1" id="id1" />
                 <label for="id1">Обрати</label>
               </div>
             </td>

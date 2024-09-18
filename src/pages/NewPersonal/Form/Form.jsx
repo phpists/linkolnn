@@ -76,7 +76,7 @@ export const Form = () => (
             type="text"
             class="form-control project-data__input"
             id="nick"
-            placeholder="Введіть персональний ніікнейм для аввтора"
+            placeholder="Введіть персональний нікнейм для автора"
           />
         </div>
       </div>
@@ -90,7 +90,7 @@ export const Form = () => (
             type="text"
             class="form-control project-data__input"
             id="bank"
-            placeholder="Введіль назву банку"
+            placeholder="Введіть назву банку"
           />
         </div>
       </div>
@@ -132,7 +132,7 @@ export const Form = () => (
             type="text"
             class="form-control project-data__input"
             id="phone"
-            placeholder="Введіть номер тлефону"
+            placeholder="Введіть номер телефону"
           />
         </div>
       </div>

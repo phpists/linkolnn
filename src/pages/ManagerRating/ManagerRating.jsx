@@ -23,9 +23,9 @@ export const ManagerRating = () => {
           ]}
         />
         <div class="btn-right">
-          <button class="btn btn-normal btn-success">
+          <a href="/manager-order" class="btn btn-normal btn-success">
             Створити замовлення
-          </button>
+          </a>
         </div>
 
         <h1 class="title-page mb-4">На оцінці</h1>

@@ -12,37 +12,48 @@
       "inProgress": "3"
     },
     {
-      "id": "1",
-      "name": "Велеров Іван Велерійович",
-      "nickname": "@petya",
-      "phone": "+380 663915620",
-      "telegram": "@valeron",
-      "rate": "4.5",
-      "done": "10",
-      "canceled": "5",
-      "inProgress": "3"
+      "id": "2",
+      "name": "Коваль Олексій Андрійович",
+      "nickname": "@alex",
+      "phone": "+380 674321987",
+      "telegram": "@alexk",
+      "rate": "4.7",
+      "done": "15",
+      "canceled": "2",
+      "inProgress": "4"
     },
     {
-      "id": "1",
-      "name": "Велеров Іван Велерійович",
-      "nickname": "@petya",
-      "phone": "+380 663915620",
-      "telegram": "@valeron",
-      "rate": "4.5",
-      "done": "10",
-      "canceled": "5",
-      "inProgress": "3"
+      "id": "3",
+      "name": "Іваненко Марія Олександрівна",
+      "nickname": "@maria",
+      "phone": "+380 671234567",
+      "telegram": "@mariak",
+      "rate": "4.6",
+      "done": "20",
+      "canceled": "3",
+      "inProgress": "6"
     },
     {
-      "id": "1",
-      "name": "Велеров Іван Велерійович",
-      "nickname": "@petya",
-      "phone": "+380 663915620",
-      "telegram": "@valeron",
-      "rate": "4.5",
-      "done": "10",
-      "canceled": "5",
-      "inProgress": "3"
+      "id": "4",
+      "name": "Сидоренко Павло Михайлович",
+      "nickname": "@pasha",
+      "phone": "+380 683456789",
+      "telegram": "@pashas",
+      "rate": "4.3",
+      "done": "8",
+      "canceled": "7",
+      "inProgress": "2"
+    },
+    {
+      "id": "5",
+      "name": "Шевченко Ольга Іванівна",
+      "nickname": "@olga",
+      "phone": "+380 673456789",
+      "telegram": "@olgash",
+      "rate": "4.8",
+      "done": "12",
+      "canceled": "1",
+      "inProgress": "5"
     }
   ]
 }

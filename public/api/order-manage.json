@@ -7,45 +7,45 @@
     {
       "file1": {
         "name": "Методичка1.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file2": {
         "name": "Методичка1.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file3": {
         "name": "Методичка3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "1"
     },
     {
       "file1": {
         "name": "Методичка2.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file2": {
         "name": "Методичка2.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file3": {
         "name": "Методичка2.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "2"
     },
     {
       "file1": {
         "name": "Методичка3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file2": {
         "name": "Методичка3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file3": {
         "name": "Методичка3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "3"
     },
@@ -54,7 +54,7 @@
       "file2": {},
       "file3": {
         "name": "План.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "4"
     }

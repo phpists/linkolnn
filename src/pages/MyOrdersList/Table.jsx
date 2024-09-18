@@ -51,9 +51,9 @@ export const Table = ({ data }) => (
               <td>{readyToDo}</td>
               <td> {note}</td>
               <td>
-                <a href="" className="rate">
+                <NavLink to="/my-orders-manage" className="rate">
                   Керувати
-                </a>
+                </NavLink>
               </td>
             </tr>
           )

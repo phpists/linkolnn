@@ -1,15 +1,17 @@
-export const Search = () => (
+export const Search = ({ value, onChange }) => (
   <div className="col col-6 d-flex justify-content-end">
     <div className="search-block">
-      <form action="" className="search-block__inner">
+      <div action="" className="search-block__inner">
         <input
           type="text"
           placeholder="Search everything"
           className="search-block__input"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
         />
-        <div className="search-block__clear"></div>
+        <div className="search-block__clear" onClick={() => onChange("")}></div>
         <button className="search-block__btn"></button>
-      </form>
+      </div>
     </div>
   </div>
 );

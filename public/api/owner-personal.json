@@ -13,36 +13,47 @@
     },
     {
       "role": "2",
-      "name": "Шевченка Василь Петрович",
-      "nickname": "@vasya",
-      "phone": "+380 66 3615620",
-      "telegram": "@vasya",
-      "login": "Vasyan123",
-      "pass": "hiuy&Y&hy0",
+      "name": "Іванов Петро Андрійович",
+      "nickname": "@petro",
+      "phone": "+380 50 1234567",
+      "telegram": "@petro",
+      "login": "PetroIvanov",
+      "pass": "PetroStrong*123",
       "mono": "Mono",
-      "card": "4444 1111 2222 5555"
+      "card": "5555 6666 7777 8888"
     },
     {
-      "role": "1",
-      "name": "Шевченка Василь Петрович",
-      "nickname": "@vasya",
-      "phone": "+380 66 3615620",
-      "telegram": "@vasya",
-      "login": "Vasyan123",
-      "pass": "hiuy&Y&hy0",
-      "mono": "Mono",
-      "card": "4444 1111 2222 5555"
+      "role": "3",
+      "name": "Коваленко Ольга Іванівна",
+      "nickname": "@olga",
+      "phone": "+380 63 9876543",
+      "telegram": "@olga",
+      "login": "OlgaKov",
+      "pass": "OlgaPass!2021",
+      "mono": "PrivatBank",
+      "card": "1234 5678 9123 4567"
     },
     {
-      "role": "2",
-      "name": "Шевченка Василь Петрович",
-      "nickname": "@vasya",
-      "phone": "+380 66 3615620",
-      "telegram": "@vasya",
-      "login": "Vasyan123",
-      "pass": "hiuy&Y&hy0",
-      "mono": "Mono",
-      "card": "4444 1111 2222 5555"
+      "role": "4",
+      "name": "Сидоренко Михайло Васильович",
+      "nickname": "@mike",
+      "phone": "+380 68 3216549",
+      "telegram": "@mike",
+      "login": "MikeSid",
+      "pass": "Mike_2022",
+      "mono": "Raiffeisen",
+      "card": "9876 5432 1098 7654"
+    },
+    {
+      "role": "5",
+      "name": "Гаврилюк Анна Сергіївна",
+      "nickname": "@anna",
+      "phone": "+380 67 4567890",
+      "telegram": "@anna",
+      "login": "AnnaGav",
+      "pass": "AnnaPass789#",
+      "mono": "PUMB",
+      "card": "2222 3333 4444 5555"
     }
   ]
 }

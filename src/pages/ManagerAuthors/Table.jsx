@@ -1,4 +1,4 @@
-export const Table = ({ data }) => (
+export const Table = ({ data, onToggleSort }) => (
   <div class="table-block mb-5">
     <table class="table">
       <thead>
@@ -8,7 +8,9 @@ export const Table = ({ data }) => (
           <th class="text-center">Телефон</th>
           <th class="text-center">Телеграм</th>
           <th class="text-center">Рейтинг</th>
-          <th class="text-center sort">Кількість завершених замовлень</th>
+          <th class="text-center sort" onClick={onToggleSort}>
+            Кількість завершених замовлень
+          </th>
           <th class="text-center">Кількість скасованих замовлень</th>
           <th class="text-center">Кількість в роботі</th>
           <th class="text-center">Поставити оцінку</th>

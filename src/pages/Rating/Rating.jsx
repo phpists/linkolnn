@@ -11,6 +11,8 @@ export const Rating = () => {
     axios.get("/api/rating.json").then((resp) => setData(resp?.data));
   }, []);
 
+  console.log(data);
+
   return (
     <main className="main-content">
       <div className="container-fluid">
@@ -22,7 +24,7 @@ export const Rating = () => {
         />
         <h1 className="title-page mb-4">Рейтинг</h1>
         <Info data={data} />
-        <Table data={data?.history} />
+        <Table data={data?.history ?? []} />
       </div>
     </main>
   );

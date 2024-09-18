@@ -1,8 +1,15 @@
+import { NavLink } from "react-router-dom";
+
 export const Footer = () => (
   <div className="btn-block">
-    <button className="btn btn-normal btn-success">Завершити проект</button>
-    <button className="btn btn-nobg btn-icon btn-icon__cancel btn-red btn-success">
+    <NavLink to="/my-orders" className="btn btn-normal btn-success">
+      Завершити проект
+    </NavLink>
+    <NavLink
+      to="/my-orders"
+      className="btn btn-nobg btn-icon btn-icon__cancel btn-red btn-success"
+    >
       Скасувати проект
-    </button>
+    </NavLink>
   </div>
 );

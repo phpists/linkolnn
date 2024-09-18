@@ -27,7 +27,9 @@ export const Table = ({ data }) => (
               {file1?.name ? (
                 <div className="info-list">
                   <div className="info-list__item">
-                    <a href={file1?.link}>{file1?.name}</a>
+                    <a href={file1?.link} download>
+                      {file1?.name}
+                    </a>
                   </div>
                 </div>
               ) : null}
@@ -36,7 +38,9 @@ export const Table = ({ data }) => (
               {file2?.name ? (
                 <div className="info-list">
                   <div className="info-list__item">
-                    <a href={file1?.link}>{file2?.name}</a>
+                    <a href={file1?.link} download>
+                      {file2?.name}
+                    </a>
                   </div>
                 </div>
               ) : null}
@@ -55,7 +59,9 @@ export const Table = ({ data }) => (
                 {step === "1" ? (
                   <div className="info-list">
                     <div className="info-list__item">
-                      <a href={file3?.link}>{file3?.name}</a>
+                      <a href={file3?.link} download>
+                        {file3?.name}
+                      </a>
                     </div>
                   </div>
                 ) : (

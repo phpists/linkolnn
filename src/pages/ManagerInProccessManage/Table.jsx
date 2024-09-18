@@ -30,7 +30,9 @@ export const Table = ({ data }) => (
                 <span>{STEPS[step]}</span>
                 <div class="info-list">
                   <div class="info-list__item">
-                    <a href={file1?.link}>{file1?.name}</a>
+                    <a href={file1?.link} download>
+                      {file1?.name}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -40,7 +42,9 @@ export const Table = ({ data }) => (
                 <div class="end-task justify-content-center">
                   <div class="info-list">
                     <div class="info-list__item">
-                      <a href={file2?.link}>{file2?.name}</a>
+                      <a href={file2?.link} download>
+                        {file2?.name}
+                      </a>
                     </div>
                   </div>
                   <button class="delete"></button>
@@ -60,7 +64,9 @@ export const Table = ({ data }) => (
                   <div class="end-task justify-content-center">
                     <div class="info-list">
                       <div class="info-list__item">
-                        <a href={file3?.link}>{file3?.name}</a>
+                        <a href={file3?.link} download>
+                          {file3?.name}
+                        </a>
                       </div>
                     </div>
                     <button class="delete"></button>

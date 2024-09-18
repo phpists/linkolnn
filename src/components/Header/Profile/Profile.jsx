@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export const Profile = () => {
+  const { pathname } = useLocation();
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -23,14 +25,27 @@ export const Profile = () => {
         <div className="icon"></div>
         <div className="info">
           <div className="name">Valera228</div>
-          <div className="type">Author</div>
+          <div className="type">
+            {pathname?.includes("manager")
+              ? "Manager"
+              : pathname?.includes("owner")
+              ? "Owner"
+              : "Author"}
+          </div>
         </div>
       </button>
       <div className="dropdown-menu user-dropdown">
         <div className="user-modal">
           <div className="user-modal__top">
             <div className="user-modal__title">Мій профіль</div>
-            <div className="user-modal__type">Автор</div>
+            <div className="user-modal__type">
+              {" "}
+              {pathname?.includes("manager")
+                ? "Менеджер"
+                : pathname?.includes("owner")
+                ? "Власник"
+                : "Автор"}
+            </div>
           </div>
           <div className="user-modal__content">
             <div className="user-modal__row">

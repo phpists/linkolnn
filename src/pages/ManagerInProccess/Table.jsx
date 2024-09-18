@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Table = ({ data }) => (
   <div class="table-block mb-5">
     <table class="table">
@@ -55,9 +57,9 @@ export const Table = ({ data }) => (
               </td>
               <td class="ellipsis">
                 <span>
-                  <a href="" class="name">
+                  <NavLink to="/my-orders-topic" className="name">
                     {name}
-                  </a>
+                  </NavLink>
                 </span>
               </td>
               <td>{unique}</td>
@@ -81,9 +83,9 @@ export const Table = ({ data }) => (
                 </div>
               </td>
               <td>
-                <a href="" class="rate">
+                <NavLink to="/manager-in-proccess-manage" className="rate">
                   Упраління
-                </a>
+                </NavLink>
               </td>
             </tr>
           )

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const Table = ({ data }) => (
   <div class="table-block mb-5">
     <table class="table">
@@ -71,9 +73,9 @@ export const Table = ({ data }) => (
                 <div class="status pay">Очікується</div>
               </td>
               <td>
-                <a href="" class="rate">
+                <NavLink to="/manager-manage" className="rate">
                   Управління
-                </a>
+                </NavLink>
               </td>
             </tr>
           )

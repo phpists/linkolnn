@@ -7,57 +7,57 @@
     {
       "file1": {
         "name": "Документ1.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file2": {
         "name": "правки.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file3": {
         "name": "правки.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "1"
     },
     {
       "file1": {
         "name": "Документ2.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file2": {
         "name": "Методичка2.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file3": {
         "name": "Методичка2.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "2"
     },
     {
       "file1": {
         "name": "Документ3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file2": {
         "name": "Методичка3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "file3": {
         "name": "Методичка3.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "3"
     },
     {
       "file1": {
         "name": "Документ4.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
-      "file2": { "name": "Документ4.pdf", "link": "" },
+      "file2": { "name": "Документ4.pdf", "link": "/mocks/pdf-blank.pdf" },
       "file3": {
         "name": "правки.pdf",
-        "link": ""
+        "link": "/mocks/pdf-blank.pdf"
       },
       "step": "4"
     }

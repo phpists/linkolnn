@@ -6,6 +6,9 @@ import axios from "axios";
 
 export const OwnerPersonal = () => {
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState("");
+
+  const handleChangeSearch = (val) => setSearch(val);
 
   useEffect(() => {
     axios
@@ -23,8 +26,21 @@ export const OwnerPersonal = () => {
           ]}
         />
         <h1 class="title-page mb-4">Персонал</h1>
-        <Header />
-        <Table data={data} />
+        <Header search={search} onChangeSearch={handleChangeSearch} />
+        <Table
+          data={data?.filter((v) =>
+            search?.length > 0
+              ? v?.name?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.nickname?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.phone?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.telegram?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.login?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.pass?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.mono?.toLowerCase()?.includes(search?.toLowerCase()) ||
+                v?.card?.toLowerCase()?.includes(search?.toLowerCase())
+              : true
+          )}
+        />
       </div>
     </main>
   );

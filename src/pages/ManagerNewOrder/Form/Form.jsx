@@ -36,7 +36,7 @@ export const Form = () => (
         <div class="new-author__block">
           <div class="clear-btn"></div>
           <input
-            type="text"
+            type="date"
             class="form-control project-data__input"
             id="deadline"
             placeholder="Оберіть пункт"
@@ -87,7 +87,7 @@ export const Form = () => (
       </div>
       <div class="new-author__item">
         <label for="comment" class="project-data__label">
-          Клментар
+          Коментар
         </label>
         <div class="new-author__block">
           <div class="clear-btn"></div>
@@ -223,6 +223,7 @@ export const Form = () => (
           <div class="name">Дойте файли</div>
           <button class="upload">
             <span>Завантажити</span>
+            <input type="file" />
           </button>
           {/* <div class="end-task justify-content-start">
             <div class="info-list">

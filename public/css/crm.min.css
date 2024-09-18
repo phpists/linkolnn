@@ -503,10 +503,10 @@ html {
   height: 54px;
 }
 .main-footer.sticky {
-  bottom: 0;
+  /* bottom: 0;
   left: 0;
   position: absolute;
-  right: 0;
+  right: 0; */
 }
 .main-content {
   padding: 40px 0 25px;
@@ -908,6 +908,16 @@ html {
   font-size: 14px;
   font-weight: 600;
   padding: 8px;
+  position: relative;
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
 }
 .upload:before {
   background: url(../images/crm/icon/upload.svg) no-repeat;
