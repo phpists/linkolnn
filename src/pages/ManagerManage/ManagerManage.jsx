@@ -36,20 +36,29 @@ export const ManagerManage = () => {
           onChangeFilters={handleChangeFilter}
         />
         <Table
-          data={data?.filter((v) =>
-            filters?.search?.length > 0
-              ? v?.author
-                  ?.toLowerCase()
-                  .includes(filters?.search?.toLowerCase()) ||
-                v?.inProgress
-                  ?.toLowerCase()
-                  .includes(filters?.search?.toLowerCase()) ||
-                v?.rate
-                  ?.toLowerCase()
-                  .includes(filters?.search?.toLowerCase()) ||
-                v?.price?.toLowerCase().includes(filters?.search?.toLowerCase())
-              : true
-          )}
+          data={data
+            ?.filter((v) =>
+              filters?.topic?.length > 0 ? v?.topic === filters?.topic : true
+            )
+            ?.filter((v) =>
+              filters?.type?.length > 0 ? v?.type === filters?.type : true
+            )
+            ?.filter((v) =>
+              filters?.search?.length > 0
+                ? v?.author
+                    ?.toLowerCase()
+                    .includes(filters?.search?.toLowerCase()) ||
+                  v?.inProgress
+                    ?.toLowerCase()
+                    .includes(filters?.search?.toLowerCase()) ||
+                  v?.rate
+                    ?.toLowerCase()
+                    .includes(filters?.search?.toLowerCase()) ||
+                  v?.price
+                    ?.toLowerCase()
+                    .includes(filters?.search?.toLowerCase())
+                : true
+            )}
         />
         <Form />
         <Footer />

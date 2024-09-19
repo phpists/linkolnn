@@ -5,35 +5,45 @@
       "author": "Валера",
       "inProgress": "4",
       "rate": "4.4",
-      "price": "700"
+      "price": "700",
+      "topic": "Економіка",
+      "type": "Курсова робота"
     },
     {
       "id": "2",
       "author": "Анна",
       "inProgress": "3",
       "rate": "4.7",
-      "price": "800"
+      "price": "800",
+      "topic": "Економіка",
+      "type": "Курсова робота"
     },
     {
       "id": "3",
       "author": "Ігор",
       "inProgress": "5",
       "rate": "4.2",
-      "price": "650"
+      "price": "650",
+      "topic": "Інформатика",
+      "type": "Дипломна робота"
     },
     {
       "id": "4",
       "author": "Марія",
       "inProgress": "2",
       "rate": "4.9",
-      "price": "750"
+      "price": "750",
+      "topic": "Філософія",
+      "type": "Есе"
     },
     {
       "id": "5",
       "author": "Олексій",
       "inProgress": "6",
       "rate": "4.1",
-      "price": "600"
+      "price": "600",
+      "topic": "Філософія",
+      "type": "Есе"
     }
   ]
 }

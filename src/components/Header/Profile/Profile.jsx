@@ -20,7 +20,16 @@ export const Profile = () => {
         aria-expanded="false"
       >
         <div className="avatar">
-          <img src="images/crm/avatar.svg" alt="" />
+          <img
+            src={`images/crm/${
+              pathname?.includes("manager")
+                ? "manager-avatar"
+                : pathname?.includes("owner")
+                ? "owner-avatar"
+                : "avatar"
+            }.svg`}
+            alt=""
+          />
         </div>
         <div className="icon"></div>
         <div className="info">
