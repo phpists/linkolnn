@@ -4,7 +4,7 @@ const LINKS = [
   { title: "Про нас", link: "/about-us" },
   { title: "Ціни", link: "/prices" },
   { title: "Відгуки", link: "/reviews" },
-  { title: "Часті запитання", link: "/faq", reload: true },
+  { title: "Часті запитання", link: "/faq" },
   { title: "Програма лояльності", link: "/promotion" },
 ];
 
