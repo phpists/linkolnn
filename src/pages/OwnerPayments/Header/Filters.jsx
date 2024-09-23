@@ -11,17 +11,7 @@ export const Filters = ({ data, filters, onChangeFilters }) => {
           onClick={(e) =>
             onChangeFilters("topic", e.currentTarget.children?.[0]?.value)
           }
-        >
-          <Select
-            name="test"
-            className="custom-select custom-select__filter"
-            placeholder="ID"
-            id="lessonn"
-            value={filters?.id}
-            options={getUniqueValues(data, "id")}
-            onChange={(v) => onChangeFilters("id", v)}
-          />
-        </div>
+        ></div>
         <div className="select-block">
           <Select
             name="test"
@@ -29,7 +19,7 @@ export const Filters = ({ data, filters, onChangeFilters }) => {
             placeholder="Виплата"
             id="worktype"
             value={filters?.paid}
-            options={getUniqueValues(data, "paid")}
+            options={["Так", "Ні"]}
             onChange={(v) => onChangeFilters("paid", v)}
           />
         </div>

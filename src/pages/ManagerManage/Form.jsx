@@ -9,7 +9,7 @@ export const Form = () => (
           type="text"
           class="form-control project-data__input"
           id="price"
-          value="1000"
+          defaultValue="1000"
         />
       </div>
       <div class="item">
@@ -20,7 +20,7 @@ export const Form = () => (
           type="text"
           class="form-control project-data__input"
           id="comment"
-          value="лишив коментар"
+          defaultValue="лишив коментар"
         />
       </div>
       <div class="item">
@@ -37,7 +37,8 @@ export const Form = () => (
           >
             <option></option>
             <option value="val2">Очікується</option>
-            <option value="val3">Отримана</option>
+            <option value="val3">50%</option>
+            <option value="val4">100%</option>
           </select>
         </div>
       </div>

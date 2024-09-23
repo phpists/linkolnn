@@ -161,3 +161,7 @@
     width: 90svw;
   }
 }
+
+.sort {
+  cursor: pointer;
+}

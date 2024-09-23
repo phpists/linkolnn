@@ -57,19 +57,22 @@ export const Table = ({ data }) => (
                     : "4. План"}
                 </span>
                 {step === "1" ? (
-                  <div className="info-list">
-                    <div className="info-list__item">
-                      <a href={file3?.link} download>
-                        {file3?.name}
-                      </a>
+                  <>
+                    {" "}
+                    <div className="info-list">
+                      <div className="info-list__item">
+                        <a href={file3?.link} download>
+                          {file3?.name}
+                        </a>
+                      </div>
                     </div>
-                  </div>
+                    <button className="delete"></button>
+                  </>
                 ) : (
                   <button className="upload">
                     <span>Заваантажити</span>
                   </button>
                 )}
-                <button className="delete"></button>
               </div>
             </td>
           </tr>

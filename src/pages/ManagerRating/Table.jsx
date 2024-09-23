@@ -54,9 +54,9 @@ export const Table = ({ data }) => (
               </td>
               <td class="ellipsis">
                 <span>
-                  <a href="" class="name">
+                  <NavLink to="/my-orders-topic" className="name">
                     {name}
-                  </a>
+                  </NavLink>
                 </span>
               </td>
               <td>{unique}</td>

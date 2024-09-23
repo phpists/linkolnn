@@ -7,12 +7,21 @@ export const Table = ({ data, onToggleSort }) => (
           <th class="text-center">Нік автора</th>
           <th class="text-center">Телефон</th>
           <th class="text-center">Телеграм</th>
-          <th class="text-center">Рейтинг</th>
-          <th class="text-center sort" onClick={onToggleSort}>
+          <th class="text-center sort" onClick={() => onToggleSort("rate")}>
+            Рейтинг
+          </th>
+          <th class="text-center sort" onClick={() => onToggleSort("done")}>
             Кількість завершених замовлень
           </th>
-          <th class="text-center">Кількість скасованих замовлень</th>
-          <th class="text-center">Кількість в роботі</th>
+          <th class="text-center sort" onClick={() => onToggleSort("canceled")}>
+            Кількість скасованих замовлень
+          </th>
+          <th
+            class="text-center sort"
+            onClick={() => onToggleSort("inProgress")}
+          >
+            Кількість в роботі
+          </th>
           <th class="text-center">Поставити оцінку</th>
         </tr>
       </thead>

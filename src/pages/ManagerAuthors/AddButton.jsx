@@ -1,5 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 export const AddButton = () => (
-  <div class="btn-right">
+  <NavLink
+    to="/manager-author"
+    className="btn-right"
+    style={{ display: "block" }}
+  >
     <button class="btn btn-normal btn-success">Додати автора</button>
-  </div>
+  </NavLink>
 );

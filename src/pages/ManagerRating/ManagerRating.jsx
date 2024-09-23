@@ -6,6 +6,10 @@ import axios from "axios";
 
 export const ManagerRating = () => {
   const [data, setData] = useState([]);
+  const [filters, setFilters] = useState({ topic: "", type: "", search: "" });
+
+  const handleChangeFilter = (field, value) =>
+    setFilters({ ...filters, [field]: value });
 
   useEffect(() => {
     axios
@@ -29,7 +33,11 @@ export const ManagerRating = () => {
         </div>
 
         <h1 class="title-page mb-4">На оцінці</h1>
-        <Header />
+        <Header
+          data={data}
+          filters={filters}
+          onChangeFilters={handleChangeFilter}
+        />
         <Table data={data} />
       </div>
     </main>

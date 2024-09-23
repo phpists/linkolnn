@@ -26,7 +26,10 @@ export const StatusSelect = () => {
           >
             <option></option>
             <option value="val2">В роботі</option>
-            <option value="val3">В роботі</option>
+            <option value="val3">Правки</option>
+            <option value="val4">На виплату</option>
+            <option value="val5">Виконано</option>
+            <option value="val6">Скасувати</option>
           </select>
         </div>
         <button

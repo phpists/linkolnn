@@ -22,7 +22,7 @@ export const Profile = () => {
         <div className="avatar">
           <img
             src={`images/crm/${
-              pathname?.includes("manager")
+              pathname?.includes("manager") || pathname === "/my-orders-topic"
                 ? "manager-avatar"
                 : pathname?.includes("owner")
                 ? "owner-avatar"
@@ -35,7 +35,7 @@ export const Profile = () => {
         <div className="info">
           <div className="name">Valera228</div>
           <div className="type">
-            {pathname?.includes("manager")
+            {pathname?.includes("manager") || pathname === "/my-orders-topic"
               ? "Manager"
               : pathname?.includes("owner")
               ? "Owner"
@@ -49,7 +49,7 @@ export const Profile = () => {
             <div className="user-modal__title">Мій профіль</div>
             <div className="user-modal__type">
               {" "}
-              {pathname?.includes("manager")
+              {pathname?.includes("manager") || pathname === "/my-orders-topic"
                 ? "Менеджер"
                 : pathname?.includes("owner")
                 ? "Власник"

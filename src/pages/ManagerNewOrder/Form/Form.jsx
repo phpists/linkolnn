@@ -33,7 +33,7 @@ export const Form = () => (
         <label for="deadline" class="project-data__label">
           Дедлайн
         </label>
-        <div class="new-author__block">
+        <div class="new-author__block deadline-field">
           <div class="clear-btn"></div>
           <input
             type="date"
@@ -220,7 +220,7 @@ export const Form = () => (
       <div class="new-author__item"></div>
       <div class="new-author__item">
         <div class="file-block">
-          <div class="name">Дойте файли</div>
+          <div class="name">Додайте файли</div>
           <button class="upload">
             <span>Завантажити</span>
             <input type="file" />

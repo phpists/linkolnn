@@ -30,11 +30,11 @@ export const ManagerManage = () => {
           ]}
         />
         <h1 class="title-page mb-4">ID 1</h1>
-        <Header
+        {/* <Header
           data={data}
           filters={filters}
           onChangeFilters={handleChangeFilter}
-        />
+        /> */}
         <Table
           data={data
             ?.filter((v) =>

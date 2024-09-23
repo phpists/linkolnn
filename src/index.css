@@ -7,3 +7,9 @@
     display: none;
   }
 }
+
+.deadline-field {
+  .clear-btn {
+    right: 35px;
+  }
+}

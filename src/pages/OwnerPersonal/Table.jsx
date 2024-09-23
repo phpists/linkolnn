@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal } from "../../components/Modal";
 
-export const Table = ({ data }) => {
+export const Table = ({ data, onToggleSort }) => {
   const [modal, setModal] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export const Table = ({ data }) => {
       <table class="table">
         <thead>
           <tr>
-            <th class="text-center">
+            <th class="text-center sort" onClick={onToggleSort}>
               <span>Роль</span>
             </th>
             <th class="text-center">

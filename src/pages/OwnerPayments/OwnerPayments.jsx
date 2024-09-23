@@ -17,6 +17,7 @@ export const OwnerPayments = () => {
       .then((resp) => setData(resp?.data?.data));
   }, []);
 
+  console.log(data);
   return (
     <main class="main-content">
       <div class="container-fluid">
@@ -38,7 +39,13 @@ export const OwnerPayments = () => {
               filters?.id?.length > 0 ? v?.id === filters?.id : true
             )
             ?.filter((v) =>
-              filters?.paid?.length > 0 ? v?.paid === filters?.paid : true
+              filters?.paid?.length > 0
+                ? filters?.paid === "Ні" && v?.paid !== "100%"
+                  ? true
+                  : filters?.paid === "Так" && v?.paid === "100%"
+                  ? true
+                  : false
+                : true
             )
             ?.filter((v) =>
               filters?.search?.length > 0

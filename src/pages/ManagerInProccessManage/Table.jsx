@@ -52,7 +52,7 @@ export const Table = ({ data }) => (
               ) : (
                 <div class="end-task justify-content-center">
                   <button class="upload">
-                    <span>Заваантажити</span>
+                    <span>Завантажити</span>
                   </button>
                 </div>
               )}
@@ -74,7 +74,7 @@ export const Table = ({ data }) => (
                 ) : (
                   <div class="end-task justify-content-center">
                     <button class="upload">
-                      <span>Заваантажити</span>
+                      <span>Завантажити</span>
                     </button>
                   </div>
                 )}

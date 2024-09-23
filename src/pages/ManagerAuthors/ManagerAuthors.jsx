@@ -9,6 +9,7 @@ export const ManagerAuthors = () => {
   const [data, setData] = useState([]);
   const [filters, setFilters] = useState({ topic: "", type: "", search: "" });
   const [sort, setSort] = useState(false);
+  const [activeSort, setActiveSort] = useState("done");
 
   const handleChangeFilter = (field, value) =>
     setFilters({ ...filters, [field]: value });
@@ -18,6 +19,11 @@ export const ManagerAuthors = () => {
       .get("/api/manager-authors.json")
       .then((resp) => setData(resp?.data?.data));
   }, []);
+
+  const handleToggleSort = (type) => {
+    setSort(activeSort === type ? !sort : false);
+    setActiveSort(type);
+  };
 
   return (
     <main class="main-content">
@@ -36,12 +42,12 @@ export const ManagerAuthors = () => {
           onChangeFilters={handleChangeFilter}
         />
         <Table
-          onToggleSort={() => setSort(!sort)}
+          onToggleSort={(type) => handleToggleSort(type)}
           data={data
             ?.sort((a, b) =>
               sort
-                ? Number(a?.done) - Number(b?.done)
-                : Number(b?.done) - Number(a?.done)
+                ? Number(a?.[activeSort]) - Number(b?.[activeSort])
+                : Number(b?.[activeSort]) - Number(a?.[activeSort])
             )
             ?.filter((v) =>
               filters?.topic?.length > 0 ? v?.topic === filters?.topic : true
