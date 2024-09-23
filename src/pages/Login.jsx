@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { Header } from "../components/Header";
+import { useState } from "react";
 
 export const Login = () => {
+  const [showPass, setShowPass] = useState(false);
+
   return (
     <div class="login-page">
       <div class="login-page__inner">
@@ -25,8 +28,15 @@ export const Login = () => {
                 пароль
               </label>
               <div class="input-block">
-                <div class="toggle-pass"></div>
-                <input type="password" id="pass" class="input-line password" />
+                <div
+                  class={`toggle-pass ${showPass && "active"}`}
+                  onClick={() => setShowPass(!showPass)}
+                ></div>
+                <input
+                  type={showPass ? "text" : "password"}
+                  id="pass"
+                  class="input-line password"
+                />
               </div>
             </div>
             <div class="btn-block">

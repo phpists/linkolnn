@@ -22,7 +22,7 @@ export const Info = () => {
                 type="text"
                 id="name"
                 class="input-line"
-                value={data?.name}
+                defaultValue={data?.name}
               />
             </div>
           </div>
@@ -44,7 +44,7 @@ export const Info = () => {
                 type="text"
                 id="name"
                 class="input-line"
-                value={data?.phone}
+                defaultValue={data?.phone}
               />
             </div>
           </div>
@@ -58,7 +58,7 @@ export const Info = () => {
                 type="text"
                 id="email"
                 class="input-line"
-                value={data?.email}
+                defaultValue={data?.email}
               />
             </div>
           </div>
@@ -80,7 +80,7 @@ export const Info = () => {
                 type="text"
                 id="tg"
                 class="input-line"
-                value={data?.telegram}
+                defaultValue={data?.telegram}
               />
             </div>
           </div>
@@ -93,7 +93,7 @@ export const Info = () => {
                 type="text"
                 id="univer"
                 class="input-line"
-                value={data?.university}
+                defaultValue={data?.university}
               />
             </div>
           </div>
@@ -106,7 +106,7 @@ export const Info = () => {
                 type="text"
                 id="course"
                 class="input-line"
-                value={data?.course}
+                defaultValue={data?.course}
               />
             </div>
           </div>

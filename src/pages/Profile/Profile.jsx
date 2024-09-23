@@ -25,7 +25,7 @@ export const Profile = () => {
           {activeTab === 0 ? (
             <MyOrders data={data} />
           ) : activeTab === 1 || activeTab === 2 ? (
-            <MyOrdersActive data={data} />
+            <MyOrdersActive data={data} done={activeTab === 2} />
           ) : activeTab === 3 ? (
             <Info />
           ) : activeTab === 4 ? (

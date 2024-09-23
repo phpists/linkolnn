@@ -1,6 +1,6 @@
 import { OrderCard } from "./OrderCard";
 
-export const MyOrdersActive = ({ data }) => (
+export const MyOrdersActive = ({ data, done }) => (
   <div class="profile__content">
     <div class="mobile-title">Мої замовлення | Активні</div>
     <div class="profile__order">
@@ -8,7 +8,7 @@ export const MyOrdersActive = ({ data }) => (
         <OrderCard
           key={i}
           name={name}
-          status={status}
+          status={!done}
           type={type}
           object={object}
           deadline={deadline}
