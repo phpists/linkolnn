@@ -18,6 +18,7 @@ export const RateField = ({ title }) => {
           className="noArrows"
           autoFocus
           max={5}
+          onBlur={() => setActive(false)}
         />
       ) : (
         <div>{value.toString()?.length === 0 ? title : value}</div>
