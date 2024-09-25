@@ -162,6 +162,34 @@
   }
 }
 
-.sort {
+.sort,
+.rate {
   cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.rate {
+  input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: Gilroy;
+    font-weight: 500;
+  }
+}
+
+.noArrows::-webkit-outer-spin-button,
+.noArrows::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.noArrows[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }

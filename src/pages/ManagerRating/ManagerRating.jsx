@@ -4,7 +4,7 @@ import { Header } from "./Header/Header";
 import { Table } from "./Table";
 import axios from "axios";
 
-export const ManagerRating = () => {
+export const ManagerRating = ({ owner }) => {
   const [data, setData] = useState([]);
   const [filters, setFilters] = useState({ topic: "", type: "", search: "" });
 
@@ -38,7 +38,16 @@ export const ManagerRating = () => {
           filters={filters}
           onChangeFilters={handleChangeFilter}
         />
-        <Table data={data} />
+        <Table
+          data={data
+            ?.filter((v) =>
+              filters?.topic?.length > 0 ? v?.topic === filters?.topic : true
+            )
+            ?.filter((v) =>
+              filters?.type?.length > 0 ? v?.type === filters?.type : true
+            )}
+          owner={owner}
+        />
       </div>
     </main>
   );

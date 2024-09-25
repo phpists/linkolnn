@@ -3,7 +3,8 @@ import { Search } from "./Search";
 
 export const Header = ({ data, filters, onChangeFilters }) => (
   <div className="row mb-4">
-    <Filters data={data} filters={filters} onChangeFilters={onChangeFilters} />
+    {/* <Filters data={data} filters={filters} onChangeFilters={onChangeFilters} /> */}
+    <div></div>
     <Search
       value={filters?.search}
       onChange={(val) => onChangeFilters("search", val)}

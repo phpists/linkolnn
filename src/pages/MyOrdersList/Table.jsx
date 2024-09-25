@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { RateField } from "../../components/RateField";
 
 export const Table = ({ data }) => (
   <div className="table-block mb-5">
@@ -51,9 +52,7 @@ export const Table = ({ data }) => (
               <td>{readyToDo}</td>
               <td> {note}</td>
               <td>
-                <NavLink to="/my-orders-manage" className="rate">
-                  Керувати
-                </NavLink>
+                <RateField title="Керувати" />
               </td>
             </tr>
           )

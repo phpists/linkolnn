@@ -1,3 +1,5 @@
+import { RateField } from "../../components/RateField";
+
 export const Table = ({ data, onToggleSort }) => (
   <div class="table-block mb-5">
     <table class="table">
@@ -50,9 +52,7 @@ export const Table = ({ data, onToggleSort }) => (
               <td>{canceled}</td>
               <td>{inProgress}</td>
               <td>
-                <a href="" class="rate">
-                  Поставити
-                </a>
+                <RateField title="Поставити" />
               </td>
             </tr>
           )

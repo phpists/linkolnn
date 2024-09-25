@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export const Table = ({ data }) => (
+export const Table = ({ data, owner }) => (
   <div class="table-block mb-5">
     <table class="table">
       <thead>
@@ -54,7 +54,10 @@ export const Table = ({ data }) => (
               </td>
               <td class="ellipsis">
                 <span>
-                  <NavLink to="/my-orders-topic" className="name">
+                  <NavLink
+                    to={`/${owner ? "owner" : "manager"}-orders-topic`}
+                    className="name"
+                  >
                     {name}
                   </NavLink>
                 </span>

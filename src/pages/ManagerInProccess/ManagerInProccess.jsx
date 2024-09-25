@@ -4,7 +4,7 @@ import { Header } from "./Header/Header";
 import { Table } from "./Table";
 import axios from "axios";
 
-export const ManagerInProccess = () => {
+export const ManagerInProccess = ({ owner }) => {
   const [data, setData] = useState([]);
   const [filters, setFilters] = useState({ topic: "", type: "", search: "" });
 
@@ -33,6 +33,7 @@ export const ManagerInProccess = () => {
           onChangeFilters={handleChangeFilter}
         />
         <Table
+          owner={owner}
           data={data
             ?.filter((v) =>
               filters?.topic?.length > 0 ? v?.topic === filters?.topic : true

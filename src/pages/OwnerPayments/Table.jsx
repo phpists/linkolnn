@@ -61,14 +61,14 @@ export const Table = ({ data }) => (
               </td>
               <td>
                 <div class="custom-switch">
-                  <input type="checkbox" name="pay" id="pay" />
-                  <label for="pay"></label>
+                  <input type="checkbox" name={`pay${i}`} id={`pay${i}`} />
+                  <label for={`pay${i}`}></label>
                 </div>
               </td>
               <td>
                 <div class="custom-checkbox single">
-                  <input type="checkbox" name="end" id="end" />
-                  <label for="end"></label>
+                  <input type="checkbox" name={`end${i}`} id={`id${i}`} />
+                  <label for={`id${i}`}></label>
                 </div>
               </td>
             </tr>

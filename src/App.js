@@ -66,6 +66,14 @@ function App() {
                 <Routes>
                   <Route element={<MyOrdersList />} path="/" />
                   <Route element={<MyOrdersTopic />} path="/my-orders-topic" />
+                  <Route
+                    element={<MyOrdersTopic />}
+                    path="/manager-orders-topic"
+                  />
+                  <Route
+                    element={<MyOrdersTopic />}
+                    path="/owner-orders-topic"
+                  />
                   <Route element={<MyOrders />} path="/my-orders" />
                   <Route
                     element={<MyOrdersManage />}
@@ -93,9 +101,12 @@ function App() {
                   <Route element={<OwnerIncome />} path="/owner-income" />
                   <Route element={<OwnerPersonal />} path="/owner-personal" />
                   <Route element={<NewPersonal />} path="/owner-new-personal" />
-                  <Route element={<ManagerRating />} path="/owner-rating" />
                   <Route
-                    element={<ManagerInProccess />}
+                    element={<ManagerRating owner />}
+                    path="/owner-rating"
+                  />
+                  <Route
+                    element={<ManagerInProccess owner />}
                     path="/owner-in-proccess"
                   />{" "}
                   <Route element={<ManagerAuthors />} path="/owner-authors" />

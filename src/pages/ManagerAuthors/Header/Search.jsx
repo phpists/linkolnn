@@ -1,5 +1,5 @@
 export const Search = ({ value, onChange }) => (
-  <div className="col col-6 d-flex justify-content-end">
+  <div className="d-flex justify-content-end">
     <div className="search-block">
       <div action="" className="search-block__inner">
         <input
