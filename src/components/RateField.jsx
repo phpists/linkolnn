@@ -10,9 +10,14 @@ export const RateField = ({ title }) => {
         <input
           type="number"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e) =>
+            Number(e.target.value) > 5 || Number(e.target.value) === 0
+              ? null
+              : setValue(e.target.value)
+          }
           className="noArrows"
           autoFocus
+          max={5}
         />
       ) : (
         <div>{value.toString()?.length === 0 ? title : value}</div>
