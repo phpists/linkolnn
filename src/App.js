@@ -92,6 +92,10 @@ function App() {
                     element={<ManagerInProccessManage />}
                     path="/manager-in-proccess-manage"
                   />
+                  <Route
+                    element={<ManagerInProccessManage />}
+                    path="/owner-in-proccess-manage"
+                  />
                   <Route element={<ManagerAuthors />} path="/manager-authors" />
                   <Route
                     element={<ManagerNewAuthor />}

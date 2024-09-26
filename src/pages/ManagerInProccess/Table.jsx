@@ -86,7 +86,10 @@ export const Table = ({ data, owner }) => (
                 </div>
               </td>
               <td>
-                <NavLink to="/manager-in-proccess-manage" className="rate">
+                <NavLink
+                  to={`/${owner ? "owner" : "manager"}-in-proccess-manage`}
+                  className="rate"
+                >
                   Упраління
                 </NavLink>
               </td>
