@@ -52,7 +52,7 @@ export const Table = ({ data }) => (
               <td>{readyToDo}</td>
               <td> {note}</td>
               <td>
-                <RateField title="Керувати" />
+                <RateField title="Керувати" noLimit />
               </td>
             </tr>
           )

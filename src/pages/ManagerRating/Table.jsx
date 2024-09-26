@@ -76,7 +76,10 @@ export const Table = ({ data, owner }) => (
                 <div class="status pay">Очікується</div>
               </td>
               <td>
-                <NavLink to="/manager-manage" className="rate">
+                <NavLink
+                  to={`/${owner ? "owner" : "manager"}-manage`}
+                  className="rate"
+                >
                   Управління
                 </NavLink>
               </td>

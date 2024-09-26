@@ -118,7 +118,7 @@ const LINKS = {
         </svg>
       ),
       title: "Автори",
-      link: "/manager-authors",
+      link: "/authors",
     },
   ],
   manager: [

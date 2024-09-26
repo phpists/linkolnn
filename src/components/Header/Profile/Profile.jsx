@@ -91,7 +91,7 @@ export const Profile = () => {
             </div>
           </div>
           <div className="user-modal__footer">
-            <a href="" className="exit">
+            <a href="/auth" className="exit">
               Вихід
             </a>
             <div className="close">Закрити</div>

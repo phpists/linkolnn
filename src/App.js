@@ -83,6 +83,7 @@ function App() {
                   <Route element={<Instructions />} path="/instructions" />
                   <Route element={<ManagerRating />} path="/manager-rating" />
                   <Route element={<ManagerManage />} path="/manager-manage" />
+                  <Route element={<ManagerManage />} path="/owner-manage" />
                   <Route
                     element={<ManagerInProccess />}
                     path="/manager-in-proccess"
@@ -110,6 +111,7 @@ function App() {
                     path="/owner-in-proccess"
                   />{" "}
                   <Route element={<ManagerAuthors />} path="/owner-authors" />
+                  <Route element={<ManagerAuthors />} path="/authors" />
                 </Routes>
               </div>
               <Footer />

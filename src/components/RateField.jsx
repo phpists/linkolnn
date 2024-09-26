@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const RateField = ({ title }) => {
+export const RateField = ({ title, noLimit }) => {
   const [value, setValue] = useState("");
   const [active, setActive] = useState(false);
 
@@ -11,7 +11,9 @@ export const RateField = ({ title }) => {
           type="number"
           value={value}
           onChange={(e) =>
-            Number(e.target.value) > 5 || Number(e.target.value) === 0
+            noLimit
+              ? setValue(e.target.value)
+              : Number(e.target.value) > 5 || Number(e.target.value) === 0
               ? null
               : setValue(e.target.value)
           }
