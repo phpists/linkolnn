@@ -118,7 +118,8 @@ function App() {
                   <Route
                     element={<ManagerAuthors owner />}
                     path="/owner-authors"
-                  />
+                  />{" "}
+                  <Route element={<ManagerNewOrder />} path="/owner-order" />
                   <Route element={<ManagerAuthors />} path="/authors" />
                 </Routes>
               </div>

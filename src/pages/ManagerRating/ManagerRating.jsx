@@ -27,7 +27,10 @@ export const ManagerRating = ({ owner }) => {
           ]}
         />
         <div class="btn-right">
-          <a href="/manager-order" class="btn btn-normal btn-success">
+          <a
+            href={`/${owner ? "owner" : "manager"}-order`}
+            class="btn btn-normal btn-success"
+          >
             Створити замовлення
           </a>
         </div>
