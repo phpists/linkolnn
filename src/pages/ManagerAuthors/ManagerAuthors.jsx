@@ -5,7 +5,7 @@ import { Header } from "./Header/Header";
 import { Table } from "./Table";
 import axios from "axios";
 
-export const ManagerAuthors = () => {
+export const ManagerAuthors = ({ owner }) => {
   const [data, setData] = useState([]);
   const [filters, setFilters] = useState({ topic: "", type: "", search: "" });
   const [sort, setSort] = useState(false);
@@ -34,7 +34,7 @@ export const ManagerAuthors = () => {
             { title: "Автори", link: "" },
           ]}
         />
-        <AddButton />
+        <AddButton owner={owner} />
         <h1 class="title-page mb-4">Автори</h1>
         <Header
           data={data}

@@ -101,6 +101,7 @@ function App() {
                     element={<ManagerNewAuthor />}
                     path="/manager-author"
                   />
+                  <Route element={<ManagerNewAuthor />} path="/owner-author" />
                   <Route element={<ManagerNewOrder />} path="/manager-order" />
                   <Route element={<OwnerPayments />} path="/owner-payments" />
                   <Route element={<OwnerIncome />} path="/owner-income" />
@@ -114,7 +115,10 @@ function App() {
                     element={<ManagerInProccess owner />}
                     path="/owner-in-proccess"
                   />{" "}
-                  <Route element={<ManagerAuthors />} path="/owner-authors" />
+                  <Route
+                    element={<ManagerAuthors owner />}
+                    path="/owner-authors"
+                  />
                   <Route element={<ManagerAuthors />} path="/authors" />
                 </Routes>
               </div>
